@@ -1,0 +1,1098 @@
+{
+  "label": "combined",
+  "port": 30102,
+  "passed": true,
+  "image_count": 72,
+  "image_concurrency": 8,
+  "image_seconds": 7.2590663358569145,
+  "images": [
+    {
+      "answer": "red",
+      "elapsed_ms": 1132.0674549788237,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 0,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 1128.0334647744894,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 1,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 1118.740949779749,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 2,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 1120.1571859419346,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 3,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 1120.8441089838743,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 4,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 1118.326760828495,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 5,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 1118.7739530578256,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 6,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 1120.3793669119477,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 7,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 741.1276428028941,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 8,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 736.70918866992,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 9,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 737.1196253225207,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 10,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "yellow",
+      "elapsed_ms": 738.926493562758,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 11,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "Red",
+      "elapsed_ms": 735.2972188964486,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 12,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 738.449689000845,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 13,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 732.2631124407053,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 14,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 732.6239971444011,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 15,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 734.384823590517,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 16,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 726.0697819292545,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 17,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 742.0329814776778,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 18,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 725.9000586345792,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 19,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "Red",
+      "elapsed_ms": 725.0362923368812,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 20,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 726.7674971371889,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 21,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 725.2454115077853,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 22,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "yellow",
+      "elapsed_ms": 726.1860948055983,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 23,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "Red",
+      "elapsed_ms": 729.2591109871864,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 24,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 731.3111126422882,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 25,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 737.3935421928763,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 26,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 729.0621558204293,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 27,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "Red",
+      "elapsed_ms": 726.9347878172994,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 28,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 727.3136479780078,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 29,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 728.5766527056694,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 30,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "yellow",
+      "elapsed_ms": 725.1610979437828,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 31,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "Red",
+      "elapsed_ms": 735.4096891358495,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 32,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 728.0102223157883,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 33,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "Green",
+      "elapsed_ms": 729.9746191129088,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 34,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 729.998561553657,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 35,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 729.9637561663985,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 36,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 727.7027787640691,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 37,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 729.0911050513387,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 38,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 728.0800072476268,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 39,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 738.5210692882538,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 40,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 744.5420389994979,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 41,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 739.8076774552464,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 42,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 738.3643640205264,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 43,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 739.1952443867922,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 44,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 738.8862315565348,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 45,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "Green",
+      "elapsed_ms": 738.4858559817076,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 46,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "yellow",
+      "elapsed_ms": 739.9581875652075,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 47,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 736.9393408298492,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 48,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 732.1356283500791,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 49,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 728.8596220314503,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 50,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 727.777217514813,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 51,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "Red",
+      "elapsed_ms": 728.788560256362,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 52,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 728.241958655417,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 53,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 727.5177258998156,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 54,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "yellow",
+      "elapsed_ms": 727.7327924966812,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 55,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 740.6138852238655,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 56,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 741.0853924229741,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 57,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 739.8612163960934,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 58,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 739.9473050609231,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 59,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 739.5632276311517,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 60,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 739.7237932309508,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 61,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 739.0750674530864,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 62,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "yellow",
+      "elapsed_ms": 739.4149638712406,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 63,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 740.9245977178216,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 64,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 737.3516773805022,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 65,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 741.4946965873241,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 66,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 738.4057035669684,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 67,
+      "expected": "yellow",
+      "passed": true
+    },
+    {
+      "answer": "red",
+      "elapsed_ms": 737.935253418982,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 68,
+      "expected": "red",
+      "passed": true
+    },
+    {
+      "answer": "blue",
+      "elapsed_ms": 737.3222727328539,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 69,
+      "expected": "blue",
+      "passed": true
+    },
+    {
+      "answer": "green",
+      "elapsed_ms": 737.2823720797896,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 70,
+      "expected": "green",
+      "passed": true
+    },
+    {
+      "answer": "Yellow",
+      "elapsed_ms": 741.3217192515731,
+      "usage": {
+        "prompt_tokens": 1047,
+        "total_tokens": 1049,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "index": 71,
+      "expected": "yellow",
+      "passed": true
+    }
+  ],
+  "video": {
+    "answer": "The background color changes from red to blue.",
+    "elapsed_ms": 215.04400484263897,
+    "usage": {
+      "prompt_tokens": 457,
+      "total_tokens": 467,
+      "completion_tokens": 10,
+      "prompt_tokens_details": null,
+      "reasoning_tokens": 0
+    },
+    "passed": true
+  },
+  "prefix_cache": [
+    {
+      "answer": "8372",
+      "elapsed_ms": 281.26158006489277,
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3652,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "answer": "8372",
+      "elapsed_ms": 94.05667334794998,
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3652,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "answer": "8372",
+      "elapsed_ms": 92.59417187422514,
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3652,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "answer": "8372",
+      "elapsed_ms": 93.14636420458555,
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3652,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "answer": "8372",
+      "elapsed_ms": 93.00562553107738,
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3652,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "answer": "8372",
+      "elapsed_ms": 93.02915167063475,
+      "usage": {
+        "prompt_tokens": 3647,
+        "total_tokens": 3652,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "gpus": "0,1",
+  "base_url": "http://127.0.0.1:30000/v1",
+  "arguments": [
+    "--model-path",
+    "MODEL_PATH",
+    "--served-model-name",
+    "ieg-infra-qwen3-vl-32b-instruct",
+    "--host",
+    "0.0.0.0",
+    "--port",
+    "30000",
+    "--dtype",
+    "bfloat16",
+    "--tp-size",
+    "2",
+    "--context-length",
+    "32768",
+    "--mem-fraction-static",
+    "0.60",
+    "--max-running-requests",
+    "8",
+    "--cuda-graph-max-bs",
+    "8",
+    "--chunked-prefill-size",
+    "4096",
+    "--enable-torch-compile",
+    "--torch-compile-max-bs",
+    "8",
+    "--keep-mm-feature-on-device",
+    "--enable-flashinfer-allreduce-fusion"
+  ],
+  "env": {
+    "SGLANG_USE_CUDA_IPC_TRANSPORT": "1",
+    "SGLANG_MM_FEATURE_CACHE_MB": "1024"
+  }
+}
