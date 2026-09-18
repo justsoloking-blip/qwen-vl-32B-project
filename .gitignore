@@ -1,0 +1,15 @@
+.venv/
+venv/
+runtime/
+.cache/
+__pycache__/
+*.pyc
+.DS_Store
+._*
+.env
+api.key
+*.log
+*.pid
+*.safetensors
+*.bin
+node_modules/
