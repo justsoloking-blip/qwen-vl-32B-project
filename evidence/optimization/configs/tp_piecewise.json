@@ -1,0 +1,31 @@
+{
+  "gpus": "6,7",
+  "base_url": "http://127.0.0.1:30106/v1",
+  "arguments": [
+    "--model-path",
+    "/models/Qwen3-VL-32B-Instruct",
+    "--served-model-name",
+    "ieg-infra-qwen3-vl-32b-instruct",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "30106",
+    "--dtype",
+    "bfloat16",
+    "--tp-size",
+    "2",
+    "--context-length",
+    "32768",
+    "--mem-fraction-static",
+    "0.60",
+    "--max-running-requests",
+    "8",
+    "--cuda-graph-max-bs",
+    "8",
+    "--chunked-prefill-size",
+    "4096",
+    "--enable-piecewise-cuda-graph",
+    "--piecewise-cuda-graph-tokens",
+    "[1,32,128,512,1024,2048,4096]"
+  ]
+}

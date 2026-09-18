@@ -1,0 +1,51 @@
+{
+  "label": "deployed",
+  "port": 30000,
+  "profiled": true,
+  "results": [
+    {
+      "case": "short",
+      "concurrency": 1,
+      "wall_s": 0.46888737939298153,
+      "requests": [
+        {
+          "case": "short",
+          "elapsed_s": 0.4686513049528003,
+          "ttft_ms": 76.2370191514492,
+          "tpot_ms": 12.658525348430679,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 550,
+            "total_tokens": 582,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 12.565378099679947
+        }
+      ]
+    },
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 0.5266804546117783,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 0.5069226669147611,
+          "ttft_ms": 157.72093832492828,
+          "tpot_ms": 11.264571889994606,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 1079,
+            "total_tokens": 1111,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 11.235764250159264
+        }
+      ]
+    }
+  ]
+}

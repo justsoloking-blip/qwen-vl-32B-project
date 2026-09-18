@@ -1,0 +1,47 @@
+[
+  {
+    "trace": "traces/compile_ipc/image/image-1789634785.5598261-TP-0.trace.json.gz",
+    "copies": {
+      "Memcpy DtoD (Device -> Device)": [
+        300,
+        129681073,
+        377.79100000000045
+      ],
+      "Memcpy DtoH (Device -> Pinned)": [
+        63,
+        392,
+        172.382
+      ],
+      "Memcpy HtoD (Pageable -> Device)": [
+        52,
+        264012,
+        59.48999999999994
+      ]
+    }
+  },
+  {
+    "trace": "traces/compile_ipc/image/image-1789634785.5598261-TP-1.trace.json.gz",
+    "copies": {
+      "Memcpy PtoP (Device -> Device)": [
+        1,
+        25165824,
+        239.072
+      ],
+      "Memcpy DtoD (Device -> Device)": [
+        299,
+        104515249,
+        327.8060000000004
+      ],
+      "Memcpy DtoH (Device -> Pinned)": [
+        63,
+        392,
+        162.88699999999992
+      ],
+      "Memcpy HtoD (Pageable -> Device)": [
+        52,
+        264012,
+        60.28499999999994
+      ]
+    }
+  }
+]

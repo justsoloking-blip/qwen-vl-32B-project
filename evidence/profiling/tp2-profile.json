@@ -1,0 +1,51 @@
+{
+  "label": "tp2",
+  "port": 30002,
+  "profiled": true,
+  "results": [
+    {
+      "case": "short",
+      "concurrency": 1,
+      "wall_s": 0.49680382013320923,
+      "requests": [
+        {
+          "case": "short",
+          "elapsed_s": 0.49648426845669746,
+          "ttft_ms": 66.52363389730453,
+          "tpot_ms": 13.859668686505287,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 553,
+            "total_tokens": 585,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 13.731373474001884
+        }
+      ]
+    },
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 0.6474363598972559,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 0.6260684095323086,
+          "ttft_ms": 243.44198312610388,
+          "tpot_ms": 12.330735613021158,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 1073,
+            "total_tokens": 1105,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 12.225302867591381
+        }
+      ]
+    }
+  ]
+}

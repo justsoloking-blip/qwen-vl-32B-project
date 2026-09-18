@@ -1,0 +1,7 @@
+[2026-09-17 15:27:16] [QwenVLProcessor Perf] rid='2ff12641b09d4125b87cd115e7b0cc92', load_time: 5.38 ms, preprocess_time: 0.00 ms, process_time: 221.36 ms, get_rope_index_time: 0.68 ms, total_time: 227.42 ms
+[2026-09-17 15:27:47] [QwenVLProcessor Perf] rid='c5c41d56f5c34923a8d039d33b11bc0a', load_time: 0.31 ms, preprocess_time: 0.00 ms, process_time: 28.01 ms, get_rope_index_time: 0.79 ms, total_time: 29.12 ms
+[2026-09-17 15:27:48] [QwenVLProcessor Perf] rid='d5080f5bcc824eca8bd30a39ebeedd09', load_time: 0.22 ms, preprocess_time: 0.00 ms, process_time: 22.79 ms, get_rope_index_time: 0.43 ms, total_time: 23.44 ms
+[2026-09-17 15:27:51] [QwenVLProcessor Perf] rid='f4a6f5ad4d10486b8ce53512e87fca0e', load_time: 0.25 ms, preprocess_time: 0.00 ms, process_time: 25.57 ms, get_rope_index_time: 0.39 ms, total_time: 26.21 ms
+[2026-09-17 15:27:54] [QwenVLProcessor Perf] rid='81c259a766584a49b5203c2a41548cd1', load_time: 0.26 ms, preprocess_time: 0.00 ms, process_time: 12.08 ms, get_rope_index_time: 0.39 ms, total_time: 12.73 ms
+[2026-09-17 15:27:57] [QwenVLProcessor Perf] rid='156a5f4ced3645bd9dc0ec8e9e4fb034', load_time: 0.58 ms, preprocess_time: 0.00 ms, process_time: 12.70 ms, get_rope_index_time: 0.61 ms, total_time: 13.89 ms
+[2026-09-17 15:27:57] [QwenVLProcessor Perf] rid='b401b90b9ceb48b6a61978086bf905f9', load_time: 0.25 ms, preprocess_time: 0.00 ms, process_time: 12.47 ms, get_rope_index_time: 0.58 ms, total_time: 13.31 ms

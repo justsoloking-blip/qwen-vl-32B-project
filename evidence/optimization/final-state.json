@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-09-17T16:57:40+0800",
+  "gpu_state": "0, NVIDIA H200, 91024 MiB, 143771 MiB\n1, NVIDIA H200, 88722 MiB, 143771 MiB\n2, NVIDIA H200, 0 MiB, 143771 MiB\n3, NVIDIA H200, 0 MiB, 143771 MiB\n4, NVIDIA H200, 0 MiB, 143771 MiB\n5, NVIDIA H200, 0 MiB, 143771 MiB\n6, NVIDIA H200, 0 MiB, 143771 MiB\n7, NVIDIA H200, 0 MiB, 143771 MiB\n",
+  "configuration": {
+    "gpus": "0,1",
+    "base_url": "http://127.0.0.1:30000/v1",
+    "arguments": [
+      "--model-path",
+      "/models/Qwen3-VL-32B-Instruct",
+      "--served-model-name",
+      "ieg-infra-qwen3-vl-32b-instruct",
+      "--host",
+      "0.0.0.0",
+      "--port",
+      "30000",
+      "--dtype",
+      "bfloat16",
+      "--tp-size",
+      "2",
+      "--context-length",
+      "32768",
+      "--mem-fraction-static",
+      "0.60",
+      "--max-running-requests",
+      "8",
+      "--cuda-graph-max-bs",
+      "8",
+      "--chunked-prefill-size",
+      "4096",
+      "--enable-torch-compile",
+      "--torch-compile-max-bs",
+      "8",
+      "--keep-mm-feature-on-device",
+      "--enable-flashinfer-allreduce-fusion"
+    ],
+    "env": {
+      "SGLANG_USE_CUDA_IPC_TRANSPORT": "1",
+      "SGLANG_MM_FEATURE_CACHE_MB": "1024"
+    }
+  },
+  "files": {
+    "service.py": "b060f40bb3c1268d1646b44e18ca5d06603a47e80153de6cb46be1a30c54a23c",
+    "config.json": "f4e16cf7cf64ec70f7f6c032cb9dd6f5e5c3953a268a7e92a6844b55666d6380",
+    "overlay/sglang/srt/models/qwen3.py": "a391bb4a9742905a70264e29c4411c12ca517b6d0ff2a01cc65ca460a4237f30",
+    "overlay/sglang/srt/models/qwen3_vl.py": "972a712ddd30f42fff9ea3df1c53f61a67e36f777de57ee1af68d9ca53eddab0",
+    "overlay/sglang/srt/model_executor/forward_batch_info.py": "3f54cfb52dbd86daa1d1d6b9b86ef96bac51d9d95c9d9d56f39b7a224ab227ac"
+  },
+  "secret_scan_passed": true
+}

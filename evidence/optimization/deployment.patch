@@ -1,0 +1,33 @@
+--- before/service.py
++++ deployed/service.py
+@@ -78,6 +78,7 @@
+     command = sys.argv[1] if len(sys.argv) > 1 else "status"
+     if command == "serve":
+         os.environ["CUDA_VISIBLE_DEVICES"] = CONFIG["gpus"]
++        os.environ.update(CONFIG.get("env", {}))
+         os.environ["HF_HUB_OFFLINE"] = "1"
+         os.environ["TOKENIZERS_PARALLELISM"] = "false"
+         os.environ["OMP_NUM_THREADS"] = "8"
+--- before/config.json
++++ deployed/config.json
+@@ -22,8 +22,16 @@
+     "8",
+     "--cuda-graph-max-bs",
+     "8",
+-    "--dp-size",
+-    "2",
+-    "--enable-dp-attention"
+-  ]
++    "--chunked-prefill-size",
++    "4096",
++    "--enable-torch-compile",
++    "--torch-compile-max-bs",
++    "8",
++    "--keep-mm-feature-on-device",
++    "--enable-flashinfer-allreduce-fusion"
++  ],
++  "env": {
++    "SGLANG_USE_CUDA_IPC_TRANSPORT": "1",
++    "SGLANG_MM_FEATURE_CACHE_MB": "1024"
++  }
+ }

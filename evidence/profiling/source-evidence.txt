@@ -1,0 +1,333 @@
+sglang/srt/layers/dp_attention.py
+443: def _dp_gather_via_all_reduce(
+444:     global_tokens: torch.Tensor,
+445:     local_tokens: torch.Tensor,
+446:     forward_batch: ForwardBatch,
+447:     is_partial: bool,
+448: ):
+449:     local_start_pos, local_num_tokens = get_dp_local_info(forward_batch)
+450: 
+451:     global_tokens.fill_(0)
+452:     assert local_tokens.is_contiguous()
+453:     assert global_tokens.is_contiguous()
+454: 
+455:     if local_tokens.shape[0] > 0 and (is_partial or get_attention_tp_rank() == 0):
+456:         assert (
+457:             local_tokens.untyped_storage() is not global_tokens.untyped_storage()
+458:         ), "aliasing between global_tokens and local_tokens not allowed"
+459: 
+460:         memcpy_triton(
+461:             global_tokens, local_tokens, 0, local_start_pos, local_num_tokens, False
+462:         )
+463: 
+464:     # Input IDs are in int 32. We should use inplace_all_reduce for local case because of custom all reduce.
+465:     NUM_GPUS_PER_NODE = 8
+466:     if (
+467:         not local_tokens.dtype.is_floating_point
+468:         and get_tensor_model_parallel_world_size() <= NUM_GPUS_PER_NODE
+469:     ):
+470:         torch.ops.sglang.inplace_all_reduce(
+471:             global_tokens, group_name=get_tp_group().unique_name
+472:         )
+473: 
+474:     else:
+475:         global_tokens[:] = tensor_model_parallel_all_reduce(global_tokens)
+476: 
+477: 
+478: def _dp_gather_via_all_gather(
+479:     global_tokens: torch.Tensor,
+480:     local_tokens: torch.Tensor,
+481:     forward_batch: ForwardBatch,
+482:     is_partial: bool,
+483: ):
+484:     if get_attention_tp_size() == 1:
+485:         get_tp_group().all_gather_into_tensor(global_tokens, local_tokens)
+486:         return
+487: 
+488:     if not is_partial:
+489:         if get_attention_tp_rank() != 0:
+490:             local_tokens.fill_(0)
+491:     scattered_local_tokens = local_tokens.tensor_split(get_attention_tp_size())[
+492:         get_attention_tp_rank()
+493:     ]
+494:     get_attention_tp_group().reduce_scatter_tensor(scattered_local_tokens, local_tokens)
+495:     get_tp_group().all_gather_into_tensor(global_tokens, scattered_local_tokens)
+496: 
+497: 
+498: def _dp_gather(
+499:     global_tokens: torch.Tensor,
+500:     local_tokens: torch.Tensor,
+501:     forward_batch: ForwardBatch,
+502:     is_partial: bool,
+503: ):
+504:     if forward_batch.dp_padding_mode.is_max_len():
+505:         _dp_gather_via_all_gather(
+506:             global_tokens, local_tokens, forward_batch, is_partial
+507:         )
+508:     else:
+509:         _dp_gather_via_all_reduce(
+510:             global_tokens, local_tokens, forward_batch, is_partial
+511:         )
+
+sglang/srt/model_executor/cuda_graph_runner.py
+141: def patch_model(
+142:     model: torch.nn.Module,
+143:     enable_compile: bool,
+144:     num_tokens: int,
+145:     tp_group: GroupCoordinator,
+146: ):
+147:     """Patch the model to make it compatible with with torch.compile"""
+148:     backup_ca_comm = None
+149: 
+150:     try:
+151:         if enable_compile:
+152:             _to_torch(model, reverse=False, num_tokens=num_tokens)
+153:             backup_ca_comm = tp_group.ca_comm
+154:             # Use custom-allreduce here.
+155:             # We found the custom allreduce is much faster than the built-in allreduce in torch,
+156:             # even with ENABLE_INTRA_NODE_COMM=1.
+157:             # tp_group.ca_comm = None
+158:             yield torch.compile(
+159:                 torch.no_grad()(model.forward),
+160:                 mode=os.environ.get(
+161:                     "SGLANG_TORCH_COMPILE_MODE", "max-autotune-no-cudagraphs"
+162:                 ),
+163:                 dynamic=_is_hip and get_bool_env_var("SGLANG_TORCH_DYNAMIC_SHAPE"),
+164:             )
+165:         else:
+166:             yield model.forward
+167:     finally:
+168:         if enable_compile:
+169:             _to_torch(model, reverse=True, num_tokens=num_tokens)
+170:             tp_group.ca_comm = backup_ca_comm
+367:     def can_run(self, forward_batch: ForwardBatch):
+368:         if self.require_mlp_tp_gather:
+369:             cuda_graph_bs = (
+370:                 max(forward_batch.global_num_tokens_cpu) // self.num_tokens_per_bs
+371:                 if self.model_runner.spec_algorithm.is_eagle()
+372:                 else max(forward_batch.global_num_tokens_cpu)
+373:             )
+374:         else:
+375:             cuda_graph_bs = forward_batch.batch_size
+376: 
+377:         graph_key = cuda_graph_bs
+378:         if self.enable_pdmux:
+379:             graph_key = f"{get_current_stream_idx()}_{cuda_graph_bs}"
+380: 
+381:         is_bs_supported = (
+382:             graph_key in self.graphs
+383:             if self.disable_padding
+384:             else cuda_graph_bs <= self.max_bs
+385:         )
+386: 
+387:         if self.require_mlp_sync:
+388:             is_bs_supported = is_bs_supported and forward_batch.can_run_dp_cuda_graph
+389: 
+566:         if self.require_mlp_tp_gather:
+567:             buffers.global_num_tokens_gpu.copy_(
+568:                 torch.tensor(
+569:                     [num_tokens] * self.dp_size,
+570:                     dtype=torch.int32,
+571:                     device=input_ids.device,
+572:                 )
+573:             )
+574:             buffers.global_num_tokens_for_logprob_gpu.copy_(
+575:                 torch.tensor(
+576:                     [num_tokens] * self.dp_size,
+577:                     dtype=torch.int32,
+578:                     device=input_ids.device,
+579:                 )
+580:             )
+581:             global_dp_buffer_len = num_tokens * self.dp_size
+582:         elif self.require_attn_tp_gather:
+583:             buffers.global_num_tokens_gpu.copy_(
+750:         raw_bs = forward_batch.batch_size
+751:         raw_num_token = raw_bs * self.num_tokens_per_bs
+752: 
+753:         # Pad
+754:         if self.require_mlp_tp_gather:
+755:             max_num_tokens = max(forward_batch.global_num_tokens_cpu)
+756:             max_batch_size = (
+757:                 max_num_tokens / self.num_tokens_per_bs
+758:                 if self.model_runner.spec_algorithm.is_eagle()
+759:                 else max_num_tokens
+760:             )
+761:             index = bisect.bisect_left(self.capture_bs, max_batch_size)
+762:         else:
+763:             index = bisect.bisect_left(self.capture_bs, raw_bs)
+764:         bs = self.capture_bs[index]
+765: 
+
+sglang/srt/models/qwen3.py
+141:     def _apply_qk_norm(
+142:         self, q: torch.Tensor, k: torch.Tensor
+143:     ) -> Tuple[torch.Tensor, torch.Tensor]:
+144:         # overlap qk norm
+145:         if self.alt_stream is not None and get_is_capture_mode():
+146:             current_stream = torch.cuda.current_stream()
+147:             self.alt_stream.wait_stream(current_stream)
+148:             q_by_head = q.reshape(-1, self.head_dim)
+149:             q_by_head = self.q_norm(q_by_head)
+150:             with torch.cuda.stream(self.alt_stream):
+151:                 k_by_head = k.reshape(-1, self.head_dim)
+152:                 k_by_head = self.k_norm(k_by_head)
+153:             current_stream.wait_stream(self.alt_stream)
+154:         else:
+155:             q_by_head = q.reshape(-1, self.head_dim)
+156:             q_by_head = self.q_norm(q_by_head)
+157:             k_by_head = k.reshape(-1, self.head_dim)
+158:             k_by_head = self.k_norm(k_by_head)
+159:         q = q_by_head.view(q.shape)
+160:         k = k_by_head.view(k.shape)
+161:         return q, k
+162: 
+163:     def forward_prepare_native(self, positions, hidden_states):
+164:         qkv, _ = self.qkv_proj(hidden_states)
+165:         q, k, v = qkv.split([self.q_size, self.kv_size, self.kv_size], dim=-1)
+166:         q, k = self._apply_qk_norm(q, k)
+167:         q, k = self.rotary_emb(positions, q, k)
+168:         return q, k, v
+169: 
+
+sglang/srt/layers/communicator.py
+535:     def should_fuse_mlp_allreduce_with_next_layer(
+536:         self, forward_batch: ForwardBatch
+537:     ) -> bool:
+538:         if (
+539:             is_dp_attention_enabled()
+540:             and self._speculative_algo is not None
+541:             and self._speculative_algo.is_eagle()
+542:         ):
+543:             return False
+544: 
+545:         if get_attn_tp_context().input_scattered:
+546:             return False
+547: 
+548:         batch_size = (
+549:             forward_batch.input_ids.shape[0]
+550:             if hasattr(forward_batch, "input_ids")
+551:             else 0
+552:         )
+553:         if batch_size > FUSE_ALLREDUCE_MAX_BATCH_SIZE:
+554:             return False
+555: 
+556:         static_conditions_met = (
+557:             (not self.is_last_layer)
+558:             and (self._context.tp_size > 1)
+559:             and not is_dp_attention_enabled()
+560:             and get_global_server_args().enable_flashinfer_allreduce_fusion
+561:             and _is_flashinfer_available
+562:         )
+563: 
+564:         if not static_conditions_met:
+565:             return False
+566: 
+567:         return (
+568:             batch_size > 0
+569:             and batch_size <= FUSE_ALLREDUCE_MAX_BATCH_SIZE
+570:             and (not self.is_last_layer)
+571:         )
+572: 
+573: 
+574: @dataclass
+575: class CommunicateContext:
+576:     process_group_sizes: Dict[ScatterMode, int]
+577:     attn_tp_rank: int
+
+sglang/srt/multimodal/processors/base_processor.py
+257:         processor = self._processor
+258:         if (
+259:             hasattr(processor, "image_processor")
+260:             and isinstance(processor.image_processor, BaseImageProcessorFast)
+261:             and not self.server_args.disable_fast_image_processor
+262:         ):
+263:             if not _is_npu:
+264:                 kwargs["device"] = "cuda"
+265:             elif processor.__class__.__name__ not in {
+266:                 "Qwen2_5_VLProcessor",
+267:                 "Qwen3VLProcessor",
+268:             }:
+269:                 # Note: for qwen-vl, processor has some reshape issue because of dims restriction on Ascend.
+270:                 kwargs["device"] = "npu"
+271:         result = processor.__call__(
+272:             text=[input_text],
+273:             padding=True,
+274:             return_tensors="pt",
+275:             **kwargs,
+276:         )
+277:         if not self.server_args.keep_mm_feature_on_device:
+278:             # move feature tensors to cpu
+279:             for feature_name in self.FEATURE_NAMES:
+280:                 if SGL_USE_CUDA_IPC:
+281:                     pass
+282:                 else:
+283:                     if feature_name in result and isinstance(
+284:                         result[feature_name], torch.Tensor
+285:                     ):
+
+sglang/srt/models/qwen3_vl.py
+666:     def get_image_feature(self, items: List[MultimodalDataItem]) -> torch.Tensor:
+667:         # in qwen-vl, last dim is the same
+668:         pixel_values = torch.cat([item.feature for item in items], dim=0).type(
+669:             self.visual.dtype
+670:         )
+671:         image_grid_thw = torch.concat([item.image_grid_thw for item in items], dim=0)
+672:         assert pixel_values.dim() == 2, pixel_values.dim()
+673:         assert image_grid_thw.dim() == 2, image_grid_thw.dim()
+674:         if self.use_data_parallel and not is_dp_attention_enabled():
+675:             return run_dp_sharded_mrope_vision_model(
+676:                 self.visual, pixel_values, image_grid_thw.tolist(), rope_type="rope_3d"
+677:             )
+678:         else:
+679:             image_embeds = self.visual(pixel_values, grid_thw=image_grid_thw)
+680:         return image_embeds
+715:         """Run forward pass for Qwen3-VL.
+716: 
+717:         Args:
+718:             input_ids: Flattened (concatenated) input_ids corresponding to a
+719:                 batch.
+720:             positions: Flattened (concatenated) position ids corresponding to a
+721:                 batch.
+722:                 **NOTE**: If mrope is enabled (default setting for Qwen2-VL
+723:                 opensource models), the shape will be `(3, seq_len)`,
+724:                 otherwise it will be `(seq_len,).
+725:                 (Use input_metadata.mrope_positions to replace it)
+726:         """
+727:         if self.is_mrope_enabled:
+728:             positions = forward_batch.mrope_positions
+729: 
+730:         if not (
+731:             forward_batch.forward_mode.is_decode()
+732:             or not forward_batch.contains_image_inputs()
+733:         ):
+734:             if self.is_mrope_enabled:
+735:                 assert positions.ndim == 2 and positions.size(0) == 3, (
+736:                     "multimodal section rotary embedding requires "
+737:                     f"(3, seq_len) positions, but got {positions.size()}"
+738:                 )
+739: 
+740:         hidden_states = general_mm_embed_routine(
+741:             input_ids=input_ids,
+742:             forward_batch=forward_batch,
+743:             language_model=self.model,
+744:             multimodal_model=self,
+745:             positions=positions,
+746:             use_deepstack=self.use_deepstack,
+747:         )
+
+sglang/srt/model_executor/model_runner.py
+1604:     def can_run_piecewise_cuda_graph(self):
+1605:         if self.server_args.enable_torch_compile:
+1606:             log_info_on_rank0(
+1607:                 logger,
+1608:                 "Disable piecewise CUDA graph because piecewise_cuda_graph has conflict with torch compile",
+1609:             )
+1610:             return False
+1611:         if self.pp_size > 1:
+1612:             # TODO(yuwei): support PP
+1613:             log_info_on_rank0(
+1614:                 logger,
+1615:                 "Disable piecewise CUDA graph because piecewise_cuda_graph does not support PP",
+1616:             )
+1617:             return False
+1618:         return True

@@ -1,0 +1,128 @@
+[
+  {
+    "trace": "traces/mm_cpu/mm-cpu-1789630077.2425842.trace.json.gz",
+    "scope_ms": [
+      14.190119000000001
+    ],
+    "gpu": {},
+    "copies": []
+  },
+  {
+    "trace": "traces/mm_cpu/mm-cpu-1789630077.8163073.trace.json.gz",
+    "scope_ms": [
+      13.565615
+    ],
+    "gpu": {},
+    "copies": []
+  },
+  {
+    "trace": "traces/mm_frontend/mm-cpu-1789630263.6346042.trace.json.gz",
+    "scope_ms": [
+      33.418789
+    ],
+    "gpu": {
+      "window_ms": 17.0688759765625,
+      "gpu_busy_union_ms": 13.5618134765625,
+      "no_gpu_activity_pct": 20.54653455104831,
+      "kernel_sum_ms": 0.064416015625,
+      "kernel_groups_ms": {
+        "layout_elementwise": 0.064416015625
+      },
+      "kernel_groups_count": {
+        "layout_elementwise": 5
+      }
+    },
+    "copies": [
+      {
+        "name": "Memcpy HtoD (Pageable -> Device)",
+        "duration_us": 194.816,
+        "bytes": 3145728
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 1.984,
+        "bytes": 3145728
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 5.025,
+        "bytes": 12582912
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 4.865,
+        "bytes": 12582912
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 6.337,
+        "bytes": 12582912
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 12.128,
+        "bytes": 25165824
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "duration_us": 13272.241,
+        "bytes": 25165824
+      }
+    ]
+  },
+  {
+    "trace": "traces/mm_frontend/mm-cpu-1789630264.308544.trace.json.gz",
+    "scope_ms": [
+      30.714713
+    ],
+    "gpu": {
+      "window_ms": 16.1029052734375,
+      "gpu_busy_union_ms": 13.3308115234375,
+      "no_gpu_activity_pct": 17.214867149300684,
+      "kernel_sum_ms": 0.064736328125,
+      "kernel_groups_ms": {
+        "layout_elementwise": 0.064736328125
+      },
+      "kernel_groups_count": {
+        "layout_elementwise": 5
+      }
+    },
+    "copies": [
+      {
+        "name": "Memcpy HtoD (Pageable -> Device)",
+        "duration_us": 200.672,
+        "bytes": 3145728
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 1.952,
+        "bytes": 3145728
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 5.152,
+        "bytes": 12582912
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 4.896,
+        "bytes": 12582912
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 6.08,
+        "bytes": 12582912
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "duration_us": 12.096,
+        "bytes": 25165824
+      },
+      {
+        "name": "Memcpy DtoH (Device -> Pageable)",
+        "duration_us": 13035.227,
+        "bytes": 25165824
+      }
+    ]
+  }
+]

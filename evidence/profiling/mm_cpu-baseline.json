@@ -1,0 +1,30 @@
+{
+  "label": "mm_cpu",
+  "port": 30004,
+  "profiled": false,
+  "results": [
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 2.781681655906141,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 2.759676804766059,
+          "ttft_ms": 262.0292892679572,
+          "tpot_ms": 19.663490597012004,
+          "chunks": 128,
+          "usage": {
+            "prompt_tokens": 1074,
+            "total_tokens": 1202,
+            "completion_tokens": 128,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 19.65601183474064
+        }
+      ],
+      "repeat": 0
+    }
+  ]
+}

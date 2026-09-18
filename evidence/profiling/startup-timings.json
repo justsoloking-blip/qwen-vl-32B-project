@@ -1,0 +1,12 @@
+{
+  "tp1_compile": [
+    "[2026-09-17 15:17:21] Load weight end. type=Qwen3VLForConditionalGeneration, dtype=torch.bfloat16, avail mem=76.83 GB, mem usage=62.46 GB.",
+    "[2026-09-17 15:19:12] Capture cuda graph end. Time elapsed: 110.59 s. mem usage=0.09 GB. avail mem=55.39 GB."
+  ],
+  "dp_compile": [
+    "[2026-09-17 15:21:09 DP0 TP0] Load weight end. type=Qwen3VLForConditionalGeneration, dtype=torch.bfloat16, avail mem=99.99 GB, mem usage=38.20 GB.",
+    "[2026-09-17 15:21:09 DP1 TP1] Load weight end. type=Qwen3VLForConditionalGeneration, dtype=torch.bfloat16, avail mem=99.99 GB, mem usage=38.20 GB.",
+    "[2026-09-17 15:23:48 DP1 TP1] Capture cuda graph end. Time elapsed: 159.49 s. mem usage=0.11 GB. avail mem=55.03 GB.",
+    "[2026-09-17 15:23:48 DP0 TP0] Capture cuda graph end. Time elapsed: 159.49 s. mem usage=0.11 GB. avail mem=55.03 GB."
+  ]
+}

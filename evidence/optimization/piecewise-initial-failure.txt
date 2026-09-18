@@ -1,0 +1,10 @@
+l_self_modules_layers_modules_63_modules_self_attn_modules_o_proj_parameters_weight_, l_self_modules_layers_modules_63_layer_communicator_post_attention_layernorm_parameters_weight_, l_input_embeds_, l_self_modules_layers_modules_63_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_63_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_norm_parameters_weight_);  getitem_255 = l_self_modules_layers_modules_63_modules_self_attn_modules_o_proj_parameters_weight_ = l_self_modules_layers_modules_63_layer_communicator_post_attention_layernorm_parameters_weight_ = l_input_embeds_ = l_self_modules_layers_modules_63_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_63_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_norm_parameters_weight_ = None
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/compilation/cuda_piecewise_backend.py", line 108, in __call__
+    runtime_shape = args[self.sym_shape_indices[0]]
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+[2026-09-17 16:23:22] Received sigquit from a child process. It usually means the child failed.
+2026-09-17T16:23:22 Worker exited -9
+Stopped after three startup failures; inspect logs/server.log

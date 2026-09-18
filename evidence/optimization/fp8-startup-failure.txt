@@ -1,0 +1,133 @@
+nstruct/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 464, in forward
+    x = blk(x, cu_seqlens=cu_seqlens, position_embeddings=position_embeddings)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 197, in forward
+    mlp = self.mlp(norm2)
+          ^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 104, in forward
+    x_fc1, _ = self.linear_fc1(x)
+               ^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/linear.py", line 438, in forward
+    output_parallel = self.quant_method.apply(self, input_, bias)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/quantization/fp8.py", line 525, in apply
+    return apply_fp8_linear(
+           ^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/quantization/fp8_utils.py", line 978, in apply_fp8_linear
+    output = triton_scaled_mm(
+             ^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/quantization/fp8_kernel.py", line 1801, in triton_scaled_mm
+    assert scale_b.shape[1] == 1 and (scale_b.shape[0] == 1 or scale_b.shape[0] == N)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+[2026-09-17 16:39:25] SIGQUIT received. signum=None, frame=None. It usually means one child failed.
+[2026-09-17 16:39:25 TP1] Scheduler hit an exception: Traceback (most recent call last):
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/scheduler.py", line 2704, in run_scheduler_process
+    scheduler.event_loop_overlap()
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/scheduler.py", line 1049, in event_loop_overlap
+    batch_result = self.run_batch(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/scheduler.py", line 2015, in run_batch
+    batch_result = self.model_worker.forward_batch_generation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/tp_worker.py", line 400, in forward_batch_generation
+    logits_output, can_run_cuda_graph = self.model_runner.forward(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/model_executor/model_runner.py", line 2655, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/model_executor/model_runner.py", line 2725, in _forward_raw
+    ret = self.forward_extend(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/model_executor/model_runner.py", line 2600, in forward_extend
+    return self.model.forward(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 740, in forward
+    hidden_states = general_mm_embed_routine(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/mm_utils.py", line 752, in general_mm_embed_routine
+    input_embeds, other_info = embed_mm_inputs(
+                               ^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/mm_utils.py", line 627, in embed_mm_inputs
+    embedding, mask = get_embedding_and_mask(
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/mm_utils.py", line 532, in get_embedding_and_mask
+    embedding = _get_chunked_prefill_embedding(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/managers/mm_utils.py", line 442, in _get_chunked_prefill_embedding
+    embedding_per_req = data_embedding_func(embedding_items_per_req)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 679, in get_image_feature
+    image_embeds = self.visual(pixel_values, grid_thw=image_grid_thw)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 464, in forward
+    x = blk(x, cu_seqlens=cu_seqlens, position_embeddings=position_embeddings)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 197, in forward
+    mlp = self.mlp(norm2)
+          ^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/models/qwen3_vl.py", line 104, in forward
+    x_fc1, _ = self.linear_fc1(x)
+               ^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/linear.py", line 438, in forward
+    output_parallel = self.quant_method.apply(self, input_, bias)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/quantization/fp8.py", line 525, in apply
+    return apply_fp8_linear(
+           ^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/quantization/fp8_utils.py", line 978, in apply_fp8_linear
+    output = triton_scaled_mm(
+             ^^^^^^^^^^^^^^^^^
+  File "/deployment/qwen3-vl-32b/optimization/tp_piecewise/overlay/sglang/srt/layers/quantization/fp8_kernel.py", line 1801, in triton_scaled_mm
+    assert scale_b.shape[1] == 1 and (scale_b.shape[0] == 1 or scale_b.shape[0] == N)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+2026-09-17T16:39:26 Worker exited -9
+Stopped after three startup failures; inspect logs/server.log

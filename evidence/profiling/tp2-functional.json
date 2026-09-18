@@ -1,0 +1,235 @@
+{
+  "passed": true,
+  "base_url": "http://127.0.0.1:30002",
+  "request_count": 19,
+  "results": [
+    {
+      "case": "text-0",
+      "answer": "1300",
+      "seconds": 0.12,
+      "usage": {
+        "prompt_tokens": 21,
+        "total_tokens": 26,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-0",
+      "answer": "1300",
+      "seconds": 0.645,
+      "usage": {
+        "prompt_tokens": 21,
+        "total_tokens": 26,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-1",
+      "answer": "1301",
+      "seconds": 0.644,
+      "usage": {
+        "prompt_tokens": 171,
+        "total_tokens": 176,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-2",
+      "answer": "1302",
+      "seconds": 0.644,
+      "usage": {
+        "prompt_tokens": 921,
+        "total_tokens": 926,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-3",
+      "answer": "1303",
+      "seconds": 0.643,
+      "usage": {
+        "prompt_tokens": 2721,
+        "total_tokens": 2726,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-0",
+      "answer": "red",
+      "seconds": 0.515,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 124,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-1",
+      "answer": "blue",
+      "seconds": 0.514,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 124,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-2",
+      "answer": "green",
+      "seconds": 0.514,
+      "usage": {
+        "prompt_tokens": 224,
+        "total_tokens": 226,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-3",
+      "answer": "purple",
+      "seconds": 0.514,
+      "usage": {
+        "prompt_tokens": 224,
+        "total_tokens": 226,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "two-images",
+      "answer": "red  \nblue",
+      "seconds": 0.165,
+      "usage": {
+        "prompt_tokens": 199,
+        "total_tokens": 203,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-0",
+      "answer": "1300",
+      "seconds": 0.469,
+      "usage": {
+        "prompt_tokens": 21,
+        "total_tokens": 26,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-1",
+      "answer": "1301",
+      "seconds": 0.469,
+      "usage": {
+        "prompt_tokens": 171,
+        "total_tokens": 176,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-2",
+      "answer": "1302",
+      "seconds": 0.469,
+      "usage": {
+        "prompt_tokens": 921,
+        "total_tokens": 926,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "text-3",
+      "answer": "1303",
+      "seconds": 0.469,
+      "usage": {
+        "prompt_tokens": 2721,
+        "total_tokens": 2726,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-0",
+      "answer": "red",
+      "seconds": 0.15,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 124,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-1",
+      "answer": "blue",
+      "seconds": 0.15,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 124,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-2",
+      "answer": "green",
+      "seconds": 0.15,
+      "usage": {
+        "prompt_tokens": 224,
+        "total_tokens": 226,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "image-3",
+      "answer": "purple",
+      "seconds": 0.15,
+      "usage": {
+        "prompt_tokens": 224,
+        "total_tokens": 226,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "two-images",
+      "answer": "red  \nblue",
+      "seconds": 0.341,
+      "usage": {
+        "prompt_tokens": 199,
+        "total_tokens": 203,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    }
+  ]
+}

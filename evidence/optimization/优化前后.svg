@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+<rect width="1200" height="1200" fill="#f4f7fb"/>
+<style>text{font-family:"PingFang SC","Arial",sans-serif;fill:#172c45}.small{font-size:20px}.value{font-size:26px;font-weight:600}</style>
+<text x="70" y="75" font-size="36" font-weight="700">Qwen3-VL-32B · 实际优化前后</text>
+<text x="70" y="115" class="small">H200 ×2 · BF16 · 同一主服务 · 无 profiler · 各 5 轮</text>
+<rect x="50" y="158" width="1100" height="210" rx="18" fill="white"/>
+<text x="75" y="194" font-size="25" font-weight="600">短文本 decode · ms/token</text>
+<text x="1010" y="194" font-size="26" fill="#167d73">-25.1%</text>
+<text x="75" y="251" class="small">优化前</text>
+<rect x="170" y="222" width="800.0" height="42" rx="5" fill="#8a9bb0"/>
+<text x="983.0" y="251" class="value">15.03</text>
+<text x="75" y="315" class="small">部署后</text>
+<rect x="170" y="286" width="598.8" height="42" rx="5" fill="#087f8c"/>
+<text x="781.8" y="315" class="value">11.25</text>
+<rect x="50" y="388" width="1100" height="210" rx="18" fill="white"/>
+<text x="75" y="424" font-size="25" font-weight="600">1024×1024 单图首 token · ms</text>
+<text x="1010" y="424" font-size="26" fill="#167d73">-56.5%</text>
+<text x="75" y="481" class="small">优化前</text>
+<rect x="170" y="452" width="800.0" height="42" rx="5" fill="#8a9bb0"/>
+<text x="983.0" y="481" class="value">254.87</text>
+<text x="75" y="545" class="small">部署后</text>
+<rect x="170" y="516" width="348.1" height="42" rx="5" fill="#087f8c"/>
+<text x="531.1" y="545" class="value">110.92</text>
+<rect x="50" y="618" width="1100" height="210" rx="18" fill="white"/>
+<text x="75" y="654" font-size="25" font-weight="600">8 并发输出吞吐 · token/s</text>
+<text x="1010" y="654" font-size="26" fill="#167d73">+27.8%</text>
+<text x="75" y="711" class="small">优化前</text>
+<rect x="170" y="682" width="625.8" height="42" rx="5" fill="#8a9bb0"/>
+<text x="808.8" y="711" class="value">447.48</text>
+<text x="75" y="775" class="small">部署后</text>
+<rect x="170" y="746" width="800.0" height="42" rx="5" fill="#087f8c"/>
+<text x="983.0" y="775" class="value">572.04</text>
+<rect x="50" y="848" width="1100" height="210" rx="18" fill="white"/>
+<text x="75" y="884" font-size="25" font-weight="600">约 4K 文本首 token · ms</text>
+<text x="1010" y="884" font-size="26" fill="#167d73">-21.8%</text>
+<text x="75" y="941" class="small">优化前</text>
+<rect x="170" y="912" width="800.0" height="42" rx="5" fill="#8a9bb0"/>
+<text x="983.0" y="941" class="value">322.50</text>
+<text x="75" y="1005" class="small">部署后</text>
+<rect x="170" y="976" width="625.3" height="42" rx="5" fill="#087f8c"/>
+<text x="808.3" y="1005" class="value">252.07</text>
+<text x="70" y="1125" class="small">已部署：TP2 + torch.compile + 通信融合 + 多模态 CUDA IPC</text>
+<text x="70" y="1160" font-size="18">合成文本/图像负载；FP8 与自定义 QK kernel 保留实验，未替换线上 BF16。</text>
+</svg>

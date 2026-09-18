@@ -1,0 +1,29 @@
+[
+  {
+    "shape": [
+      1,
+      128,
+      40
+    ],
+    "max_abs_error": 1.52587890625e-05,
+    "layouts_equal": true
+  },
+  {
+    "shape": [
+      17,
+      128,
+      40
+    ],
+    "max_abs_error": 0.00048828125,
+    "layouts_equal": true
+  },
+  {
+    "shape": [
+      33,
+      128,
+      64
+    ],
+    "max_abs_error": 0.0009765625,
+    "layouts_equal": true
+  }
+]

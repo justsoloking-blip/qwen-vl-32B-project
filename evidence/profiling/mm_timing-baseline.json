@@ -1,0 +1,76 @@
+{
+  "label": "mm_timing",
+  "port": 30004,
+  "profiled": false,
+  "results": [
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 2.7899188213050365,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 2.768602652475238,
+          "ttft_ms": 270.16506530344486,
+          "tpot_ms": 19.669862926064983,
+          "chunks": 128,
+          "usage": {
+            "prompt_tokens": 1076,
+            "total_tokens": 1204,
+            "completion_tokens": 128,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 19.664284773170948
+        }
+      ],
+      "repeat": 0
+    },
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 2.788773536682129,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 2.768609861843288,
+          "ttft_ms": 268.19897536188364,
+          "tpot_ms": 19.68434310012211,
+          "chunks": 128,
+          "usage": {
+            "prompt_tokens": 1070,
+            "total_tokens": 1198,
+            "completion_tokens": 128,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 19.66056041419506
+        }
+      ],
+      "repeat": 1
+    },
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 2.7686260156333447,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 2.748393528163433,
+          "ttft_ms": 250.93981996178627,
+          "tpot_ms": 19.66229334150947,
+          "chunks": 128,
+          "usage": {
+            "prompt_tokens": 1071,
+            "total_tokens": 1199,
+            "completion_tokens": 128,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 19.660471938550472
+        }
+      ],
+      "repeat": 2
+    }
+  ]
+}
