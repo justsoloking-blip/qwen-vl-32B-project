@@ -1,0 +1,38 @@
+[
+  {
+    "title": "梳理SGLang中DP Attention及其Padding问题",
+    "url": "https://zhuanlan.zhihu.com/p/1938017616435320355",
+    "author": "wxzhou",
+    "description": "对应：DP Attention、批次补齐、通信与 CUDA Graph。",
+    "scope": "文章以旧版 SGLang / MoE 为例；本项目为 Dense 模型。",
+    "verified": true,
+    "verification": "2026-09-22，浏览器逐个打开，核对标题、作者及正文；未遇到登录或验证码阻拦。"
+  },
+  {
+    "title": "一文搞懂 TorchDynamo 原理",
+    "url": "https://zhuanlan.zhihu.com/p/630933479",
+    "author": "吾乃阿尔法",
+    "description": "对应：torch.compile 的计算图捕获与编译机制。",
+    "scope": "PyTorch 2.0 原理入门；具体 API 以项目锁定版本为准。",
+    "verified": true,
+    "verification": "2026-09-22，浏览器逐个打开，核对标题、作者及正文；未遇到登录或验证码阻拦。"
+  },
+  {
+    "title": "（万字长文）说说大模型中的推理加速技术",
+    "url": "https://zhuanlan.zhihu.com/p/25708488005",
+    "author": "爱吃牛油果的璐璐",
+    "description": "对应：Prefill / Decode、KV Cache 与推理优化背景。",
+    "scope": "帮助理解优化位置；并非本项目实测收益的来源。",
+    "verified": true,
+    "verification": "2026-09-22，浏览器逐个打开，核对标题、作者及正文；未遇到登录或验证码阻拦。"
+  },
+  {
+    "title": "LLM 确定性推理",
+    "url": "https://zhuanlan.zhihu.com/p/1961192621759242664",
+    "author": "吃果冻不吐果冻皮",
+    "description": "对应：批次变化、浮点误差与优化后的正确性验证。",
+    "scope": "一致性背景阅读；不能替代本项目 stride 错误的定位。",
+    "verified": true,
+    "verification": "2026-09-22，浏览器逐个打开，核对标题、作者及正文；未遇到登录或验证码阻拦。"
+  }
+]

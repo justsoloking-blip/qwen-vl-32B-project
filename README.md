@@ -27,7 +27,7 @@
 | 8 并发输出吞吐 | 447.48 token/s | 572.04 token/s | +27.8% |
 | 8 并发首 token | 269.60 ms | 265.41 ms | -1.6% |
 
-合成文本/几何图，单请求指标 n=5，并发指标 n=40。未锁 GPU 时钟，不能将 1% 差异或本表直接当作生产 P99 结论。[原始数据](benchmarks/results/) · [完整实施报告](docs/optimization-report.md) · [DP Attention 修复文档](docs/dp-attention-compatibility.md) · [技术汇报 PPT](slides/qwen3-vl-dp-attention-and-optimization.pptx)
+合成文本/几何图，单请求指标 n=5，并发指标 n=40。未锁 GPU 时钟，不能将 1% 差异或本表直接当作生产 P99 结论。[原始数据](benchmarks/results/) · [完整实施报告](docs/optimization-report.md) · [DP Attention 修复文档](docs/dp-attention-compatibility.md) · [技术汇报 PPT（最新版，103 页）](slides/qwen3-vl-dp-attention-and-optimization-v12-zhihu-references.pptx)
 
 ## 版本与工程结构
 
@@ -183,3 +183,7 @@ MODEL_RUNTIME=runtime/optimized runtime/optimized/venv/bin/python \
 ## 已知边界与下一步
 
 本轮没有实现 ViT 专项融合、跨进程统一 request span、prefill/decode 分离、KV FP8 或投机解码，也没有通过降低图片分辨率或提高并发上限包装收益。下一个实验应使用真实业务数据验证 FP8/自定义 QK 的质量，再单独测它们与当前优化组合的交互。硬件计数器需要额外用 Nsight Compute 采样热点，现有 profiler 不能直接证明 HBM 饱和。
+
+### PPT 参考资料更新（2026-09-22）
+
+最新版含四次课实验、验证结果，以及第 102 页 GitHub 参考代码、第 103 页知乎延伸阅读。知乎 4 篇文章已于 2026-09-22 在浏览器逐个打开并核对标题、作者和正文；PPT 标明了各文章与项目的关系及适用范围。旧版演示文稿可通过 Git 历史查看。
