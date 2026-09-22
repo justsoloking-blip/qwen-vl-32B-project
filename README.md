@@ -1,5 +1,15 @@
 # Qwen3-VL-32B：DP Attention 修复与逐步性能优化
 
+## 四次课程与 2026-09-22 实测
+
+- [四课作业、独立答案目录与复现入口](courses/qwen-vl-course-answers/README.md)
+- [九组配置的 GPU 实测报告](courses/qwen-vl-course-answers/FRESH_GPU_REPORT.md)
+- [实验脚本修复与验证边界](courses/qwen-vl-course-answers/REPRODUCTION_NOTES.md)
+- [机器可读验证记录](courses/qwen-vl-course-answers/verification/full-course-verification.json)
+
+本次完成 9 组配置、495 条基准请求及 12 份新增 GPU trace。自定义 QK 内核发现 positions stride 缺陷，已拒绝部署；默认组合课程题严格匹配 39/40，1 题为 OCR 数字间空格差异。全部原始结果与失败证据随答案目录提供。
+
+
 本项目保存 **Qwen3-VL-32B-Instruct 在 SGLang 0.5.6.post2 上的部署工程、兼容性修复、性能优化过程与实测证据**。测试使用两张 H200 和 NVLink，模型保持 BF16。实际推理框架是 **SGLang，不是 vLLM**。
 
 最终选择普通 TP2、torch.compile、FlashInfer all-reduce 融合、多模态 CUDA IPC。DP Attention 修复版完整保留，但性能优化版关闭 DP Attention。**“支持 DP Attention”与“当前负载适合 DP Attention”是两个分别验证的问题。**

@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "scope": "Real source method bodies via AST + CPU torch; vision/collectives mocked; not SGLang integration.",
+  "verified_at_utc": "2026-09-22T07:51:32.100900+00:00",
+  "details": {
+    "torch": "2.9.1",
+    "padding_checks": 14,
+    "vision_dispatch_checks": 8,
+    "constructor_checks": 4,
+    "results": [
+      {
+        "version": "original",
+        "case": [
+          78,
+          78,
+          1,
+          1
+        ],
+        "invariant_passed": false,
+        "expected": false,
+        "error": "RuntimeError"
+      },
+      {
+        "version": "original",
+        "case": [
+          5,
+          8,
+          2,
+          2
+        ],
+        "invariant_passed": false,
+        "expected": false,
+        "error": "RuntimeError"
+      },
+      {
+        "version": "original",
+        "case": [
+          1,
+          4,
+          1,
+          4
+        ],
+        "invariant_passed": false,
+        "expected": false,
+        "error": "AssertionError"
+      },
+      {
+        "version": "original",
+        "case": [
+          0,
+          4,
+          0,
+          4
+        ],
+        "invariant_passed": false,
+        "expected": false,
+        "error": "AssertionError"
+      },
+      {
+        "version": "original",
+        "case": [
+          7,
+          10,
+          3,
+          3
+        ],
+        "invariant_passed": false,
+        "expected": false,
+        "error": "AssertionError"
+      },
+      {
+        "version": "original",
+        "case": [
+          7,
+          7,
+          3,
+          3
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "original",
+        "case": [
+          78,
+          128,
+          1,
+          1
+        ],
+        "invariant_passed": false,
+        "expected": false,
+        "error": "RuntimeError"
+      },
+      {
+        "version": "original",
+        "vision_dispatch": [
+          {
+            "dp_attention": false,
+            "modality": "image",
+            "local": false,
+            "collectives_mocked": true
+          },
+          {
+            "dp_attention": false,
+            "modality": "video",
+            "local": false,
+            "collectives_mocked": true
+          },
+          {
+            "dp_attention": true,
+            "modality": "image",
+            "local": false,
+            "collectives_mocked": true
+          },
+          {
+            "dp_attention": true,
+            "modality": "video",
+            "local": false,
+            "collectives_mocked": true
+          }
+        ],
+        "vision_constructor_checks": 2
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          78,
+          78,
+          1,
+          1
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          5,
+          8,
+          2,
+          2
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          1,
+          4,
+          1,
+          4
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          0,
+          4,
+          0,
+          4
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          7,
+          10,
+          3,
+          3
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          7,
+          7,
+          3,
+          3
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "case": [
+          78,
+          128,
+          1,
+          1
+        ],
+        "invariant_passed": true,
+        "expected": true,
+        "error": null
+      },
+      {
+        "version": "dp-attention-fixed",
+        "vision_dispatch": [
+          {
+            "dp_attention": false,
+            "modality": "image",
+            "local": false,
+            "collectives_mocked": true
+          },
+          {
+            "dp_attention": false,
+            "modality": "video",
+            "local": false,
+            "collectives_mocked": true
+          },
+          {
+            "dp_attention": true,
+            "modality": "image",
+            "local": true,
+            "collectives_mocked": true
+          },
+          {
+            "dp_attention": true,
+            "modality": "video",
+            "local": true,
+            "collectives_mocked": true
+          }
+        ],
+        "vision_constructor_checks": 2
+      }
+    ]
+  }
+}

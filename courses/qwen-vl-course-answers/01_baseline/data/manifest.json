@@ -1,0 +1,502 @@
+[
+  {
+    "id": "text-0",
+    "modality": "text",
+    "prompt": "Compute 17 * 23. Return the integer only.",
+    "expected": "391",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-1",
+    "modality": "text",
+    "prompt": "Compute 18 * 24. Return the integer only.",
+    "expected": "432",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-2",
+    "modality": "text",
+    "prompt": "Compute 19 * 25. Return the integer only.",
+    "expected": "475",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-3",
+    "modality": "text",
+    "prompt": "Compute 20 * 26. Return the integer only.",
+    "expected": "520",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-4",
+    "modality": "text",
+    "prompt": "Compute 21 * 27. Return the integer only.",
+    "expected": "567",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-5",
+    "modality": "text",
+    "prompt": "Compute 22 * 28. Return the integer only.",
+    "expected": "616",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-6",
+    "modality": "text",
+    "prompt": "Compute 23 * 29. Return the integer only.",
+    "expected": "667",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-7",
+    "modality": "text",
+    "prompt": "Compute 24 * 30. Return the integer only.",
+    "expected": "720",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-8",
+    "modality": "text",
+    "prompt": "Compute 25 * 31. Return the integer only.",
+    "expected": "775",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "text-9",
+    "modality": "text",
+    "prompt": "Compute 26 * 32. Return the integer only.",
+    "expected": "832",
+    "files": [],
+    "source": "Course-generated, no external images",
+    "sha256": {}
+  },
+  {
+    "id": "ocr-0",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5837",
+    "files": [
+      "ocr-0.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-0.png": "f234b82a13bb2277d22571961317621bdc4e5d676513e062d1fb57777dd14855"
+    }
+  },
+  {
+    "id": "ocr-1",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5838",
+    "files": [
+      "ocr-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-1.png": "e7aeb88dbf44808d31814bea0a156b239ad97c943d1d21d3b835f6015a65dc8f"
+    }
+  },
+  {
+    "id": "ocr-2",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5839",
+    "files": [
+      "ocr-2.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-2.png": "b9cf2be4d7751c5e48ee748d67d6b56219fa7af6754f39df1604684adcc218ce"
+    }
+  },
+  {
+    "id": "ocr-3",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5840",
+    "files": [
+      "ocr-3.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-3.png": "46c7483ec38b4da08095384b9046a55efe4fb7d4b765e280aafa4c99abdedc89"
+    }
+  },
+  {
+    "id": "ocr-4",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5841",
+    "files": [
+      "ocr-4.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-4.png": "9bedd4ca58674a9bbe2cd78f2371c5f2d5dcf0e2b2c4c538f552995413e7969d"
+    }
+  },
+  {
+    "id": "ocr-5",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5842",
+    "files": [
+      "ocr-5.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-5.png": "b88ac7e1e884415bcfa6e43cd8c741a3440b4ee6253cd732c8bdef005fd954d5"
+    }
+  },
+  {
+    "id": "ocr-6",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5843",
+    "files": [
+      "ocr-6.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-6.png": "f8defc2938e5bde04fd3d1676024dcd99df1a8319b5b993bf53a30f541bdfbd4"
+    }
+  },
+  {
+    "id": "ocr-7",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5844",
+    "files": [
+      "ocr-7.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-7.png": "6dd08806871f0bb6638a5c30b85be1750e23fd1d643deebdff8d7315110ba01b"
+    }
+  },
+  {
+    "id": "ocr-8",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5845",
+    "files": [
+      "ocr-8.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-8.png": "4db88d06405d9ef7e8c651aeb7236f0747483104609952eba66b427985cc4e8e"
+    }
+  },
+  {
+    "id": "ocr-9",
+    "modality": "image",
+    "prompt": "Read the four-digit number. Return the digits only.",
+    "expected": "5846",
+    "files": [
+      "ocr-9.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "ocr-9.png": "c01e90e4319aabf20cfe8df8193389c5e7e16ca8e8dc5d2f1fe9e088dc4149ea"
+    }
+  },
+  {
+    "id": "color-0",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "red",
+    "files": [
+      "color-0.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-0.png": "98d61fbbdf2ece9038f48a2458f4e906062620db8ad5f9f2c10343de72feffc2"
+    }
+  },
+  {
+    "id": "color-1",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "blue",
+    "files": [
+      "color-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-1.png": "69129ac77a11511287103b4af7869f8081ed03a9b499941ed5f02c244f553853"
+    }
+  },
+  {
+    "id": "color-2",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "green",
+    "files": [
+      "color-2.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-2.png": "05a764cdec413efc442d4ac82eae5c8f5e30adaa89e1d8e4cddc84863d7be542"
+    }
+  },
+  {
+    "id": "color-3",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "yellow",
+    "files": [
+      "color-3.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-3.png": "a9315d5fcf2a0bba2a213e2516cbaac55c35225c076a9bc9530891228ee26eb3"
+    }
+  },
+  {
+    "id": "color-4",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "red",
+    "files": [
+      "color-4.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-4.png": "f4a0ece1232df9ed7940d97c58614030753c9f7b063aca26470ef7c82c92a89f"
+    }
+  },
+  {
+    "id": "color-5",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "blue",
+    "files": [
+      "color-5.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-5.png": "3afe31d8edfc8051973bc5132dcd38b73e5e1e47b9388e389658fd867e5953c3"
+    }
+  },
+  {
+    "id": "color-6",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "green",
+    "files": [
+      "color-6.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-6.png": "80f4fe0ab680e788ce68515594994fec3ecbf06baede302cf67706599cf898ef"
+    }
+  },
+  {
+    "id": "color-7",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "yellow",
+    "files": [
+      "color-7.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-7.png": "a2932a418db6e4fa83b1b5e87653f16b9232f82941d117efe16455999f12a2d2"
+    }
+  },
+  {
+    "id": "color-8",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "red",
+    "files": [
+      "color-8.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-8.png": "f790d56d899b852e0e38df2241a61946da2ee09bf2720ecb5ea25547121ec264"
+    }
+  },
+  {
+    "id": "color-9",
+    "modality": "image",
+    "prompt": "What is the background color? Return one lowercase English color word.",
+    "expected": "blue",
+    "files": [
+      "color-9.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "color-9.png": "ea88cef7e1307923dc1181b8c9ea724a4c253c9ea7cfe406625c783df06b2cae"
+    }
+  },
+  {
+    "id": "multi-0",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "red,blue",
+    "files": [
+      "multi-0-0.png",
+      "multi-0-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-0-0.png": "4cb244d414ed57a0a81ad808c62ff855a390b00b01f2f8591fcf8d035317ec78",
+      "multi-0-1.png": "449c56497fec01b080d2c8c79a590c3daf28dc5e323227dc36c66d4e5dcca06b"
+    }
+  },
+  {
+    "id": "multi-1",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "blue,green",
+    "files": [
+      "multi-1-0.png",
+      "multi-1-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-1-0.png": "449c56497fec01b080d2c8c79a590c3daf28dc5e323227dc36c66d4e5dcca06b",
+      "multi-1-1.png": "9061425f3fd7000eebe0753ccc1b1c672e7f7540db8832835347f3c42516ee3b"
+    }
+  },
+  {
+    "id": "multi-2",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "green,yellow",
+    "files": [
+      "multi-2-0.png",
+      "multi-2-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-2-0.png": "9061425f3fd7000eebe0753ccc1b1c672e7f7540db8832835347f3c42516ee3b",
+      "multi-2-1.png": "9de8d956c492c4b827d4354f3dd15f774a85213a11d341ff924a1e5e4117df8f"
+    }
+  },
+  {
+    "id": "multi-3",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "yellow,red",
+    "files": [
+      "multi-3-0.png",
+      "multi-3-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-3-0.png": "9de8d956c492c4b827d4354f3dd15f774a85213a11d341ff924a1e5e4117df8f",
+      "multi-3-1.png": "4cb244d414ed57a0a81ad808c62ff855a390b00b01f2f8591fcf8d035317ec78"
+    }
+  },
+  {
+    "id": "multi-4",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "red,blue",
+    "files": [
+      "multi-4-0.png",
+      "multi-4-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-4-0.png": "4cb244d414ed57a0a81ad808c62ff855a390b00b01f2f8591fcf8d035317ec78",
+      "multi-4-1.png": "449c56497fec01b080d2c8c79a590c3daf28dc5e323227dc36c66d4e5dcca06b"
+    }
+  },
+  {
+    "id": "multi-5",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "blue,green",
+    "files": [
+      "multi-5-0.png",
+      "multi-5-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-5-0.png": "449c56497fec01b080d2c8c79a590c3daf28dc5e323227dc36c66d4e5dcca06b",
+      "multi-5-1.png": "9061425f3fd7000eebe0753ccc1b1c672e7f7540db8832835347f3c42516ee3b"
+    }
+  },
+  {
+    "id": "multi-6",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "green,yellow",
+    "files": [
+      "multi-6-0.png",
+      "multi-6-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-6-0.png": "9061425f3fd7000eebe0753ccc1b1c672e7f7540db8832835347f3c42516ee3b",
+      "multi-6-1.png": "9de8d956c492c4b827d4354f3dd15f774a85213a11d341ff924a1e5e4117df8f"
+    }
+  },
+  {
+    "id": "multi-7",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "yellow,red",
+    "files": [
+      "multi-7-0.png",
+      "multi-7-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-7-0.png": "9de8d956c492c4b827d4354f3dd15f774a85213a11d341ff924a1e5e4117df8f",
+      "multi-7-1.png": "4cb244d414ed57a0a81ad808c62ff855a390b00b01f2f8591fcf8d035317ec78"
+    }
+  },
+  {
+    "id": "multi-8",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "red,blue",
+    "files": [
+      "multi-8-0.png",
+      "multi-8-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-8-0.png": "4cb244d414ed57a0a81ad808c62ff855a390b00b01f2f8591fcf8d035317ec78",
+      "multi-8-1.png": "449c56497fec01b080d2c8c79a590c3daf28dc5e323227dc36c66d4e5dcca06b"
+    }
+  },
+  {
+    "id": "multi-9",
+    "modality": "multi-image",
+    "prompt": "Return the two background colors in image order, lowercase and separated by one comma, no spaces.",
+    "expected": "blue,green",
+    "files": [
+      "multi-9-0.png",
+      "multi-9-1.png"
+    ],
+    "source": "Course-generated, no external images",
+    "sha256": {
+      "multi-9-0.png": "449c56497fec01b080d2c8c79a590c3daf28dc5e323227dc36c66d4e5dcca06b",
+      "multi-9-1.png": "9061425f3fd7000eebe0753ccc1b1c672e7f7540db8832835347f3c42516ee3b"
+    }
+  }
+]

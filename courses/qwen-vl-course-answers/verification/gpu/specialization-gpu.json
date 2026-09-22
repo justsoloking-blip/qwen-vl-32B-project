@@ -1,0 +1,62 @@
+[
+  {
+    "variant": "runtime_N",
+    "tokens": 551,
+    "compile_inclusive_wall_ms": 840.0840079411864
+  },
+  {
+    "variant": "runtime_N",
+    "tokens": 552,
+    "compile_inclusive_wall_ms": 0.1204032450914383
+  },
+  {
+    "variant": "runtime_N",
+    "tokens": 553,
+    "compile_inclusive_wall_ms": 0.06539560854434967
+  },
+  {
+    "variant": "runtime_N",
+    "tokens": 551,
+    "compile_inclusive_wall_ms": 0.058222562074661255
+  },
+  {
+    "variant": "runtime_N",
+    "tokens": 552,
+    "compile_inclusive_wall_ms": 0.07470417767763138
+  },
+  {
+    "variant": "runtime_N",
+    "tokens": 553,
+    "compile_inclusive_wall_ms": 0.05666818469762802
+  },
+  {
+    "variant": "constexpr_N",
+    "tokens": 551,
+    "compile_inclusive_wall_ms": 288.8356614857912
+  },
+  {
+    "variant": "constexpr_N",
+    "tokens": 552,
+    "compile_inclusive_wall_ms": 91.600869782269
+  },
+  {
+    "variant": "constexpr_N",
+    "tokens": 553,
+    "compile_inclusive_wall_ms": 89.54867254942656
+  },
+  {
+    "variant": "constexpr_N",
+    "tokens": 551,
+    "compile_inclusive_wall_ms": 0.08044205605983734
+  },
+  {
+    "variant": "constexpr_N",
+    "tokens": 552,
+    "compile_inclusive_wall_ms": 0.06327405571937561
+  },
+  {
+    "variant": "constexpr_N",
+    "tokens": 553,
+    "compile_inclusive_wall_ms": 0.059934332966804504
+  }
+]

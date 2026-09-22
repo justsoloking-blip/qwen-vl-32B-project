@@ -1,0 +1,67 @@
+{
+  "upstream": "sglang==0.5.6.post2",
+  "model_revision": "0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+  "sanitization": "Model path and internal connection details in configuration replaced with portable placeholders. service/source logic preserved. Hashes refer to original source files.",
+  "files": [
+    {
+      "version": "original",
+      "file": "service.py",
+      "source_sha256": "f3498ef3ada44f7ddd91413ccf47cbc8e308eecffbd22816d2dcca388c051a93"
+    },
+    {
+      "version": "original",
+      "file": "config.json",
+      "source_sha256": "75c71f64ebe4ca946f02b326a31cf5fb7089007d68afafb5581012f020703739"
+    },
+    {
+      "version": "original",
+      "file": "src/sglang/srt/model_executor/forward_batch_info.py",
+      "source_sha256": "a03fdc0a9296ec6a0d590e79127b9ca114106bb259b16f44b5e8de42a1266bae"
+    },
+    {
+      "version": "original",
+      "file": "src/sglang/srt/models/qwen3_vl.py",
+      "source_sha256": "a651bdef3e2f3ef7b99831a0f2a96c4bdc28c0263b6c9823d1a19addace0008d"
+    },
+    {
+      "version": "dp-attention-fixed",
+      "file": "service.py",
+      "source_sha256": "9c5d777425e42f40e3bcddd1cc38f7726807f2813126f7cdb1752d77c3dda9e5"
+    },
+    {
+      "version": "dp-attention-fixed",
+      "file": "config.json",
+      "source_sha256": "fcc7115b49f20a879330e2780bde4c5766b400a4e7e175ecc689cd1b4c9a483b"
+    },
+    {
+      "version": "dp-attention-fixed",
+      "file": "src/sglang/srt/model_executor/forward_batch_info.py",
+      "source_sha256": "3f54cfb52dbd86daa1d1d6b9b86ef96bac51d9d95c9d9d56f39b7a224ab227ac"
+    },
+    {
+      "version": "dp-attention-fixed",
+      "file": "src/sglang/srt/models/qwen3_vl.py",
+      "source_sha256": "972a712ddd30f42fff9ea3df1c53f61a67e36f777de57ee1af68d9ca53eddab0"
+    },
+    {
+      "version": "optimized",
+      "file": "service.py",
+      "source_sha256": "b060f40bb3c1268d1646b44e18ca5d06603a47e80153de6cb46be1a30c54a23c"
+    },
+    {
+      "version": "optimized",
+      "file": "config.json",
+      "source_sha256": "f4e16cf7cf64ec70f7f6c032cb9dd6f5e5c3953a268a7e92a6844b55666d6380"
+    },
+    {
+      "version": "optimized",
+      "file": "src/sglang/srt/model_executor/forward_batch_info.py",
+      "source_sha256": "3f54cfb52dbd86daa1d1d6b9b86ef96bac51d9d95c9d9d56f39b7a224ab227ac"
+    },
+    {
+      "version": "optimized",
+      "file": "src/sglang/srt/models/qwen3_vl.py",
+      "source_sha256": "972a712ddd30f42fff9ea3df1c53f61a67e36f777de57ee1af68d9ca53eddab0"
+    }
+  ]
+}

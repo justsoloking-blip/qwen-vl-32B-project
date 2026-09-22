@@ -1,0 +1,52 @@
+{
+  "evidence_validation_passed": true,
+  "verified_at_utc": "2026-09-22T08:17:31.971118+00:00",
+  "scope": "Fresh Linux H200 pair inference + GPU kernel experiments, followed by local evidence recomputation",
+  "labels": [
+    "A_dp2",
+    "B_tp2",
+    "C_compile",
+    "D_fusion",
+    "E_compile_fusion",
+    "F_keep_device",
+    "G_ipc",
+    "Q_qk",
+    "H_final"
+  ],
+  "course_verification_completed": true,
+  "default_candidate_quality": {
+    "strict_matches": 39,
+    "cases": 40,
+    "content_matches_ignoring_OCR_whitespace": 40,
+    "strict_passed": false,
+    "note": "Post-hoc classification of one formatting failure; original strict grading unchanged."
+  },
+  "all_candidates_quality_passed": false,
+  "experimental_candidate_decision": {
+    "candidate": "Q_qk",
+    "accepted": false,
+    "reason": "Observed mixed-concurrency output 130 instead of 1300; preserve failure even if a later rerun passes.",
+    "small_quality_matches": 16,
+    "course_quality_matches": 30
+  },
+  "counts": {
+    "benchmark_batches": 180,
+    "benchmark_requests": 495,
+    "smoke_configurations": 9,
+    "mixed_integration_requests": 38,
+    "quality_requests": 48,
+    "course_quality_requests": 80,
+    "gpu_traces": 12,
+    "gpu_kernel_cases": 16,
+    "specialization_calls": 12,
+    "position_stride_counterexamples": 3
+  },
+  "evidence_root": "verification/gpu",
+  "limitations": [
+    "Five rounds per workload, sequential configurations; not a reliable P99 or causal estimate free of drift.",
+    "Same prompt generator with random request salts; actual input token counts recorded, prompts not byte-identical.",
+    "GPUs 0/1 reserved for experiments; another job remained on GPU6 of the same host.",
+    "40 synthetic quality cases do not establish general business quality or video quality.",
+    "Profiler timings separate from unprofiled 128-token benchmarks."
+  ]
+}

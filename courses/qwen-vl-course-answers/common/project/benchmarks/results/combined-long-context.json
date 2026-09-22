@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "base_url": "http://127.0.0.1:30102",
+  "results": [
+    {
+      "case": "long-text",
+      "answer": "8197",
+      "usage": {
+        "prompt_tokens": 30021,
+        "total_tokens": 30026,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "seconds": 3.969
+    },
+    {
+      "case": "long-vision",
+      "answer": "Green",
+      "usage": {
+        "prompt_tokens": 18125,
+        "total_tokens": 18127,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "seconds": 3.929
+    }
+  ]
+}

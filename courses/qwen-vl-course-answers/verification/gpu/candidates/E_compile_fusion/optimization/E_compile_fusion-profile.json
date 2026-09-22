@@ -1,0 +1,51 @@
+{
+  "label": "E_compile_fusion",
+  "port": 30100,
+  "profiled": true,
+  "results": [
+    {
+      "case": "short",
+      "concurrency": 1,
+      "wall_s": 0.46334061212837696,
+      "requests": [
+        {
+          "case": "short",
+          "elapsed_s": 0.4629567814990878,
+          "ttft_ms": 71.24702725559473,
+          "tpot_ms": 12.635798523983647,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 552,
+            "total_tokens": 584,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 12.562893331050873
+        }
+      ]
+    },
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 0.6271557491272688,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 0.6068341806530952,
+          "ttft_ms": 258.44122655689716,
+          "tpot_ms": 11.238482390199938,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 1076,
+            "total_tokens": 1108,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 11.229620315134525
+        }
+      ]
+    }
+  ]
+}

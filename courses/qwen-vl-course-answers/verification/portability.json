@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "scope": "Extracted ZIP under different directory containing spaces; all four local checks executed successfully and deterministic outputs identical. Does not verify CUDA.",
+  "local_checks": [
+    {
+      "folder": "01_baseline",
+      "passed": true,
+      "log": "01_baseline/results/local-run.log"
+    },
+    {
+      "folder": "02_dp_fix",
+      "passed": true,
+      "log": "02_dp_fix/results/local-run.log"
+    },
+    {
+      "folder": "03_profiling",
+      "passed": true,
+      "log": "03_profiling/results/local-run.log"
+    },
+    {
+      "folder": "04_fusion",
+      "passed": true,
+      "log": "04_fusion/results/local-run.log"
+    }
+  ],
+  "source_files_sha256_checked": 108
+}

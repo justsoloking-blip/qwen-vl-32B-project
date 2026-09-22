@@ -1,0 +1,51 @@
+{
+  "label": "G_ipc",
+  "port": 30100,
+  "profiled": true,
+  "results": [
+    {
+      "case": "short",
+      "concurrency": 1,
+      "wall_s": 0.4890618985518813,
+      "requests": [
+        {
+          "case": "short",
+          "elapsed_s": 0.48882395680993795,
+          "ttft_ms": 78.09003256261349,
+          "tpot_ms": 13.249481427333047,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 553,
+            "total_tokens": 585,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 13.164046220481396
+        }
+      ]
+    },
+    {
+      "case": "image",
+      "concurrency": 1,
+      "wall_s": 0.5173157239332795,
+      "requests": [
+        {
+          "case": "image",
+          "elapsed_s": 0.497340539470315,
+          "ttft_ms": 129.81418333947659,
+          "tpot_ms": 11.8556889074464,
+          "chunks": 32,
+          "usage": {
+            "prompt_tokens": 1074,
+            "total_tokens": 1106,
+            "completion_tokens": 32,
+            "prompt_tokens_details": null,
+            "reasoning_tokens": 0
+          },
+          "chunk_gap_p50_ms": 11.834762990474701
+        }
+      ]
+    }
+  ]
+}

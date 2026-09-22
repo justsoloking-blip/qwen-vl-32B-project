@@ -1,0 +1,46 @@
+{
+  "known_boundary_regression_reproduced": true,
+  "candidate_accepted": false,
+  "scope": "Same values, different positions storage strides. This diagnoses a kernel defect, not a proof that every service failure has this sole cause.",
+  "cases": [
+    {
+      "tokens": 1,
+      "position_stride": [
+        17,
+        1
+      ],
+      "contiguous_position_stride": [
+        1,
+        1
+      ],
+      "max_abs_difference": 10.3125,
+      "layout_invariance_passed": false
+    },
+    {
+      "tokens": 4,
+      "position_stride": [
+        17,
+        1
+      ],
+      "contiguous_position_stride": [
+        4,
+        1
+      ],
+      "max_abs_difference": 14.25,
+      "layout_invariance_passed": false
+    },
+    {
+      "tokens": 8,
+      "position_stride": [
+        17,
+        1
+      ],
+      "contiguous_position_stride": [
+        8,
+        1
+      ],
+      "max_abs_difference": 12.875,
+      "layout_invariance_passed": false
+    }
+  ]
+}

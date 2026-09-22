@@ -1,0 +1,15 @@
+{
+  "os": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "packages": {
+    "torch": "2.9.1+cu128",
+    "sglang": "0.5.6.post2",
+    "transformers": "4.57.1",
+    "flashinfer-python": "0.5.3",
+    "triton": "3.5.1",
+    "sgl-kernel": "0.3.19"
+  },
+  "cuda": "12.8",
+  "gpu": "0, NVIDIA H200, 580.159.04, 143771 MiB\n1, NVIDIA H200, 580.159.04, 143771 MiB\n2, NVIDIA H200, 580.159.04, 143771 MiB\n3, NVIDIA H200, 580.159.04, 143771 MiB\n4, NVIDIA H200, 580.159.04, 143771 MiB\n5, NVIDIA H200, 580.159.04, 143771 MiB\n6, NVIDIA H200, 580.159.04, 143771 MiB\n7, NVIDIA H200, 580.159.04, 143771 MiB\n",
+  "selected_gpus": "0,1"
+}

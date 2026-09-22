@@ -1,0 +1,15 @@
+{
+  "os": "Linux x86_64",
+  "python": "3.12",
+  "gpu": "2 x NVIDIA H200, NVLink",
+  "sglang": "0.5.6.post2",
+  "torch": "2.9.1+cu128",
+  "transformers": "4.57.1",
+  "flashinfer": "0.5.3",
+  "sgl_kernel": "0.3.19",
+  "triton": "3.5.1",
+  "weight_dtype": "bfloat16",
+  "context_length": 32768,
+  "max_running_requests": 8,
+  "measurement_date": "2026-09-17"
+}

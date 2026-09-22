@@ -1,0 +1,20 @@
+test_decode_padding (__main__.MropePaddingTest.test_decode_padding) ... ok
+test_idle_rank_padding (__main__.MropePaddingTest.test_idle_rank_padding) ... ok
+test_prefill_original_failure (__main__.MropePaddingTest.test_prefill_original_failure) ... ok
+test_prefill_token_padding (__main__.MropePaddingTest.test_prefill_token_padding) ... ok
+test_three_requests_preserve_axes (__main__.MropePaddingTest.test_three_requests_preserve_axes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK
+test_dp_attention_replicates_vision_weights (__main__.VisionDPTest.test_dp_attention_replicates_vision_weights) ... ok
+test_existing_image_sharding_preserved (__main__.VisionDPTest.test_existing_image_sharding_preserved) ... ok
+test_existing_video_sharding_preserved (__main__.VisionDPTest.test_existing_video_sharding_preserved) ... ok
+test_image_stays_local_with_dp_attention (__main__.VisionDPTest.test_image_stays_local_with_dp_attention) ... ok
+test_video_stays_local_with_dp_attention (__main__.VisionDPTest.test_video_stays_local_with_dp_attention) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+OK

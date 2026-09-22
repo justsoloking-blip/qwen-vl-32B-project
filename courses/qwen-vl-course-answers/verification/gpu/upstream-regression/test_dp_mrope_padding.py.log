@@ -1,0 +1,97 @@
+test_decode_padding (__main__.MropePaddingTest.test_decode_padding) ... FAIL
+test_idle_rank_padding (__main__.MropePaddingTest.test_idle_rank_padding) ... FAIL
+test_prefill_original_failure (__main__.MropePaddingTest.test_prefill_original_failure) ... ERROR
+test_prefill_token_padding (__main__.MropePaddingTest.test_prefill_token_padding) ... ERROR
+test_three_requests_preserve_axes (__main__.MropePaddingTest.test_three_requests_preserve_axes) ... FAIL
+
+======================================================================
+ERROR: test_prefill_original_failure (__main__.MropePaddingTest.test_prefill_original_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 33, in test_prefill_original_failure
+    self.check_padding(78, 78, 1, 1)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 26, in check_padding
+    batch._pad_inputs_to_size(runner, padded_tokens, padded_bs)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/verification/upstream-regression/original/overlay/sglang/srt/model_executor/forward_batch_info.py", line 882, in _pad_inputs_to_size
+    self.mrope_positions = self._pad_tensor_to_size(self.mrope_positions, bs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/verification/upstream-regression/original/overlay/sglang/srt/model_executor/forward_batch_info.py", line 761, in _pad_tensor_to_size
+    [tensor, tensor.new_zeros(size - tensor.shape[0], *tensor.shape[1:])],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Trying to create tensor with negative dimension -2: [-2, 78]
+
+======================================================================
+ERROR: test_prefill_token_padding (__main__.MropePaddingTest.test_prefill_token_padding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 36, in test_prefill_token_padding
+    self.check_padding(5, 8, 2, 2)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 26, in check_padding
+    batch._pad_inputs_to_size(runner, padded_tokens, padded_bs)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/verification/upstream-regression/original/overlay/sglang/srt/model_executor/forward_batch_info.py", line 882, in _pad_inputs_to_size
+    self.mrope_positions = self._pad_tensor_to_size(self.mrope_positions, bs)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/verification/upstream-regression/original/overlay/sglang/srt/model_executor/forward_batch_info.py", line 761, in _pad_tensor_to_size
+    [tensor, tensor.new_zeros(size - tensor.shape[0], *tensor.shape[1:])],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Trying to create tensor with negative dimension -1: [-1, 5]
+
+======================================================================
+FAIL: test_decode_padding (__main__.MropePaddingTest.test_decode_padding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 39, in test_decode_padding
+    self.check_padding(1, 4, 1, 4)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 27, in check_padding
+    self.assertEqual(tuple(batch.mrope_positions.shape), (3, padded_tokens))
+AssertionError: Tuples differ: (4, 1) != (3, 4)
+
+First differing element 0:
+4
+3
+
+- (4, 1)
++ (3, 4)
+
+======================================================================
+FAIL: test_idle_rank_padding (__main__.MropePaddingTest.test_idle_rank_padding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 42, in test_idle_rank_padding
+    self.check_padding(0, 4, 0, 4)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 27, in check_padding
+    self.assertEqual(tuple(batch.mrope_positions.shape), (3, padded_tokens))
+AssertionError: Tuples differ: (4, 0) != (3, 4)
+
+First differing element 0:
+4
+3
+
+- (4, 0)
++ (3, 4)
+
+======================================================================
+FAIL: test_three_requests_preserve_axes (__main__.MropePaddingTest.test_three_requests_preserve_axes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 45, in test_three_requests_preserve_axes
+    self.check_padding(7, 10, 3, 3)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_mrope_padding.py", line 27, in check_padding
+    self.assertEqual(tuple(batch.mrope_positions.shape), (3, padded_tokens))
+AssertionError: Tuples differ: (3, 7) != (3, 10)
+
+First differing element 1:
+7
+10
+
+- (3, 7)
+?     ^
+
++ (3, 10)
+?     ^^
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (failures=3, errors=2)

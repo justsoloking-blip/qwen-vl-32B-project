@@ -1,0 +1,30 @@
+{
+  "executed_at_utc": "2026-09-22T07:51:41.235502+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "local_checks": [
+    {
+      "folder": "01_baseline",
+      "passed": true,
+      "log": "01_baseline/results/local-run.log"
+    },
+    {
+      "folder": "02_dp_fix",
+      "passed": true,
+      "log": "02_dp_fix/results/local-run.log"
+    },
+    {
+      "folder": "03_profiling",
+      "passed": true,
+      "log": "03_profiling/results/local-run.log"
+    },
+    {
+      "folder": "04_fusion",
+      "passed": true,
+      "log": "04_fusion/results/local-run.log"
+    }
+  ],
+  "local_passed": true,
+  "gpu_execution_performed_by_this_runner": false,
+  "gpu_status": "This runner checks CPU methods and archived data only. See verification/full-course-verification.json for separately executed GPU validation."
+}

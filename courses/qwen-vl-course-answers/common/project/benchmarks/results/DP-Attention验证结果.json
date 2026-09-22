@@ -1,0 +1,411 @@
+{
+  "live_settings": {
+    "tp_size": 2,
+    "dp_size": 2,
+    "enable_dp_attention": true,
+    "context_length": 32768,
+    "max_running_requests": 8,
+    "disable_custom_all_reduce": false
+  },
+  "smoke": {
+    "model": "ieg-infra-qwen3-vl-32b-instruct",
+    "tested_at": "2026-09-16T17:04:44+0800",
+    "unauthenticated_status": 401,
+    "models": {
+      "object": "list",
+      "data": [
+        {
+          "id": "ieg-infra-qwen3-vl-32b-instruct",
+          "object": "model",
+          "created": 1789549484,
+          "owned_by": "sglang",
+          "root": "ieg-infra-qwen3-vl-32b-instruct",
+          "parent": null,
+          "max_model_len": 32768
+        }
+      ]
+    },
+    "health_status": 200,
+    "text": {
+      "elapsed_seconds": 0.45,
+      "response": {
+        "id": "e0745379c1ae4a4e8054aae50296d6a9",
+        "object": "chat.completion",
+        "created": 1789549485,
+        "model": "ieg-infra-qwen3-vl-32b-instruct",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "391",
+              "reasoning_content": null,
+              "tool_calls": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "matched_stop": 151645
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 22,
+          "total_tokens": 26,
+          "completion_tokens": 4,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        },
+        "metadata": {
+          "weight_version": "default"
+        }
+      }
+    },
+    "vision": {
+      "elapsed_seconds": 0.33,
+      "response": {
+        "id": "fbf51afad07343e98ef4bb4bf2fc0140",
+        "object": "chat.completion",
+        "created": 1789549485,
+        "model": "ieg-infra-qwen3-vl-32b-instruct",
+        "choices": [
+          {
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "From left to right: a red square and a blue circle.",
+              "reasoning_content": null,
+              "tool_calls": null
+            },
+            "logprobs": null,
+            "finish_reason": "stop",
+            "matched_stop": 151645
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 129,
+          "total_tokens": 143,
+          "completion_tokens": 14,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        },
+        "metadata": {
+          "weight_version": "default"
+        }
+      }
+    },
+    "streaming": {
+      "completed": true,
+      "content": "部署成功"
+    },
+    "passed": true
+  },
+  "concurrent": {
+    "passed": true,
+    "base_url": "http://127.0.0.1:30000",
+    "request_count": 19,
+    "results": [
+      {
+        "case": "text-0",
+        "answer": "1300",
+        "seconds": 0.139,
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 26,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-0",
+        "answer": "1300",
+        "seconds": 0.95,
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 26,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-1",
+        "answer": "1301",
+        "seconds": 0.948,
+        "usage": {
+          "prompt_tokens": 171,
+          "total_tokens": 176,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-2",
+        "answer": "1302",
+        "seconds": 0.949,
+        "usage": {
+          "prompt_tokens": 921,
+          "total_tokens": 926,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-3",
+        "answer": "1303",
+        "seconds": 0.948,
+        "usage": {
+          "prompt_tokens": 2721,
+          "total_tokens": 2726,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-0",
+        "answer": "red",
+        "seconds": 0.807,
+        "usage": {
+          "prompt_tokens": 122,
+          "total_tokens": 124,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-1",
+        "answer": "blue",
+        "seconds": 0.806,
+        "usage": {
+          "prompt_tokens": 122,
+          "total_tokens": 124,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-2",
+        "answer": "green",
+        "seconds": 0.806,
+        "usage": {
+          "prompt_tokens": 224,
+          "total_tokens": 226,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-3",
+        "answer": "purple",
+        "seconds": 0.805,
+        "usage": {
+          "prompt_tokens": 224,
+          "total_tokens": 226,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "two-images",
+        "answer": "red  \nblue",
+        "seconds": 0.188,
+        "usage": {
+          "prompt_tokens": 199,
+          "total_tokens": 203,
+          "completion_tokens": 4,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-0",
+        "answer": "1300",
+        "seconds": 0.474,
+        "usage": {
+          "prompt_tokens": 21,
+          "total_tokens": 26,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-1",
+        "answer": "1301",
+        "seconds": 0.474,
+        "usage": {
+          "prompt_tokens": 171,
+          "total_tokens": 176,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-2",
+        "answer": "1302",
+        "seconds": 0.474,
+        "usage": {
+          "prompt_tokens": 921,
+          "total_tokens": 926,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "text-3",
+        "answer": "1303",
+        "seconds": 0.473,
+        "usage": {
+          "prompt_tokens": 2721,
+          "total_tokens": 2726,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-0",
+        "answer": "red",
+        "seconds": 0.351,
+        "usage": {
+          "prompt_tokens": 122,
+          "total_tokens": 124,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-1",
+        "answer": "blue",
+        "seconds": 0.35,
+        "usage": {
+          "prompt_tokens": 122,
+          "total_tokens": 124,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-2",
+        "answer": "green",
+        "seconds": 0.332,
+        "usage": {
+          "prompt_tokens": 224,
+          "total_tokens": 226,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "image-3",
+        "answer": "purple",
+        "seconds": 0.35,
+        "usage": {
+          "prompt_tokens": 224,
+          "total_tokens": 226,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      },
+      {
+        "case": "two-images",
+        "answer": "red  \nblue",
+        "seconds": 0.171,
+        "usage": {
+          "prompt_tokens": 199,
+          "total_tokens": 203,
+          "completion_tokens": 4,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        }
+      }
+    ]
+  },
+  "long_context": {
+    "passed": true,
+    "base_url": "http://127.0.0.1:30000",
+    "results": [
+      {
+        "case": "long-text",
+        "answer": "8197",
+        "usage": {
+          "prompt_tokens": 30021,
+          "total_tokens": 30026,
+          "completion_tokens": 5,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        },
+        "seconds": 5.057
+      },
+      {
+        "case": "long-vision",
+        "answer": "Green",
+        "usage": {
+          "prompt_tokens": 18125,
+          "total_tokens": 18127,
+          "completion_tokens": 2,
+          "prompt_tokens_details": null,
+          "reasoning_tokens": 0
+        },
+        "seconds": 3.501
+      }
+    ]
+  },
+  "patch_manifest": {
+    "sglang_version": "0.5.6.post2",
+    "files": {
+      "sglang/srt/model_executor/forward_batch_info.py": "3f54cfb52dbd86daa1d1d6b9b86ef96bac51d9d95c9d9d56f39b7a224ab227ac",
+      "sglang/srt/models/qwen3_vl.py": "972a712ddd30f42fff9ea3df1c53f61a67e36f777de57ee1af68d9ca53eddab0"
+    }
+  },
+  "video_on_isolated_instance": {
+    "passed": true,
+    "response": {
+      "id": "0871a69eeb59414d97f449e98cee5061",
+      "object": "chat.completion",
+      "created": 1789549279,
+      "model": "ieg-infra-qwen3-vl-32b-instruct",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "At the beginning, the shape is red. At the end, the shape is blue.",
+            "reasoning_content": null,
+            "tool_calls": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "matched_stop": 151645
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 462,
+        "total_tokens": 481,
+        "completion_tokens": 19,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "metadata": {
+        "weight_version": "default"
+      }
+    }
+  },
+  "regression_tests": {
+    "mrope": 5,
+    "vision_dispatch": 5,
+    "passed": true
+  }
+}

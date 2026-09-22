@@ -1,0 +1,112 @@
+[
+  {
+    "file": "common/archive/traces/compile_ipc/image/image-1789634785.5598261-TP-0.trace.json.gz",
+    "large_24MiB_copies": [
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.192
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.544
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.96
+      }
+    ]
+  },
+  {
+    "file": "common/archive/traces/compile_ipc/image/image-1789634785.5598261-TP-1.trace.json.gz",
+    "large_24MiB_copies": [
+      {
+        "name": "Memcpy PtoP (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 239.072
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 11.744
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.864
+      }
+    ]
+  },
+  {
+    "file": "common/archive/traces/deployed/image/image-1789635452.6940026-TP-0.trace.json.gz",
+    "large_24MiB_copies": [
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.545
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 11.84
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.864
+      }
+    ]
+  },
+  {
+    "file": "common/archive/traces/deployed/image/image-1789635452.6940026-TP-1.trace.json.gz",
+    "large_24MiB_copies": [
+      {
+        "name": "Memcpy PtoP (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 69.088
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.16
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.895
+      }
+    ]
+  },
+  {
+    "file": "common/archive/traces/tp2/image/image-1789629532.6639452-TP-0.trace.json.gz",
+    "large_24MiB_copies": [
+      {
+        "name": "Memcpy HtoD (Pageable -> Device)",
+        "bytes": 25165824,
+        "dur_us": 2521.536
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 13.344
+      }
+    ]
+  },
+  {
+    "file": "common/archive/traces/tp2/image/image-1789629532.6639452-TP-1.trace.json.gz",
+    "large_24MiB_copies": [
+      {
+        "name": "Memcpy HtoD (Pageable -> Device)",
+        "bytes": 25165824,
+        "dur_us": 1956.191
+      },
+      {
+        "name": "Memcpy DtoD (Device -> Device)",
+        "bytes": 25165824,
+        "dur_us": 12.064
+      }
+    ]
+  }
+]

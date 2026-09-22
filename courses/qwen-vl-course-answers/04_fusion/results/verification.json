@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "scope": "16 CPU mathematical-reference cases and archived microbenchmark arithmetic; actual Triton JIT/CUDA/model integration NOT rerun.",
+  "verified_at_utc": "2026-09-22T07:51:41.115864+00:00",
+  "details": {
+    "torch": "2.9.1",
+    "axis_counts": [
+      24,
+      20,
+      20
+    ],
+    "cpu_cases": [
+      {
+        "tokens": 1,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 1,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.0,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 4,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 4,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.0,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 8,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 8,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.0,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 32,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 32,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.015625,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 128,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 128,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.0078125,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 551,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 551,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.015625,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 1075,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 1075,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.015625,
+        "input_q_stride": 10240
+      },
+      {
+        "tokens": 4050,
+        "q_heads": 32,
+        "k_heads": 4,
+        "max_abs_error": 0.0078125,
+        "input_q_stride": 5120
+      },
+      {
+        "tokens": 4050,
+        "q_heads": 64,
+        "k_heads": 8,
+        "max_abs_error": 0.0078125,
+        "input_q_stride": 10240
+      }
+    ],
+    "runtime_N_source_check": true,
+    "historical_microbench_cases": 16
+  }
+}

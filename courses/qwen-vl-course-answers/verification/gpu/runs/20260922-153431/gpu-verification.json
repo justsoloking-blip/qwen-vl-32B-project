@@ -1,0 +1,15 @@
+{
+  "stage": "ablation",
+  "started_at_utc": "2026-09-22T07:34:31.198732+00:00",
+  "passed": true,
+  "completed": [
+    "B_tp2",
+    "C_compile",
+    "D_fusion",
+    "E_compile_fusion",
+    "F_keep_device",
+    "G_ipc"
+  ],
+  "scope": "Fresh Linux CUDA execution",
+  "finished_at_utc": "2026-09-22T07:57:00.838828+00:00"
+}

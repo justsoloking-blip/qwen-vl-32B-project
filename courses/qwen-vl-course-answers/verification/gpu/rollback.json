@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "scope": "Restart previously verified DP2 runtime after stopping final optimization candidate; health and smoke; then stop this test service.",
+  "started_at_utc": "2026-09-22T08:11:48.502233+00:00",
+  "finished_at_utc": "2026-09-22T08:12:37.333169+00:00"
+}

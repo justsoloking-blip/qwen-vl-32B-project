@@ -1,0 +1,18 @@
+{
+  "stage": "fusion",
+  "started_at_utc": "2026-09-22T08:00:23.943709+00:00",
+  "passed": false,
+  "completed": [
+    "Q_qk"
+  ],
+  "quality_failures": [
+    {
+      "label": "Q_qk",
+      "check": "course-quality",
+      "returncode": 1
+    }
+  ],
+  "scope": "Fresh Linux CUDA execution",
+  "execution_completed": true,
+  "finished_at_utc": "2026-09-22T08:02:29.355866+00:00"
+}

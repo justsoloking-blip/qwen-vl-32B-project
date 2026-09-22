@@ -1,0 +1,13 @@
+compile_allreduce short 0 prefill 61.82 decode 12.522 bubble 14.28 kernels 1158 {'communication': 6.0, 'layout_elementwise': 2.8, 'compiler_fused': 82.5, 'rope': 0.9, 'other': 1.8, 'attention': 6.0}
+compile_allreduce short 1 prefill 60.93 decode 12.516 bubble 14.39 kernels 1158 {'compiler_fused': 82.8, 'rope': 0.9, 'layout_elementwise': 2.8, 'other': 1.8, 'attention': 6.1, 'communication': 5.7}
+compile_ipc image 0 prefill 119.79 decode 11.843 bubble 4.73 kernels 1222 {'communication': 4.8, 'layout_elementwise': 3.4, 'compiler_fused': 83.2, 'rope': 0.8, 'other': 1.7, 'attention': 6.0}
+compile_ipc image 1 prefill 119.1 decode 11.844 bubble 4.73 kernels 1222 {'communication': 6.4, 'layout_elementwise': 3.4, 'compiler_fused': 81.5, 'rope': 0.8, 'other': 1.7, 'attention': 6.0}
+deployed image 0 prefill 142.04 decode 11.237 bubble 4.64 kernels 1158 {'layout_elementwise': 2.7, 'other': 1.8, 'attention': 6.4, 'compiler_fused': 82.7, 'communication': 5.6, 'rope': 0.8}
+deployed image 1 prefill 141.58 decode 11.239 bubble 4.63 kernels 1158 {'communication': 6.7, 'layout_elementwise': 2.8, 'compiler_fused': 81.4, 'rope': 0.9, 'other': 1.8, 'attention': 6.4}
+deployed short 0 prefill 64.88 decode 12.561 bubble 15.27 kernels 1158 {'communication': 5.8, 'layout_elementwise': 2.7, 'compiler_fused': 82.8, 'rope': 0.8, 'other': 1.8, 'attention': 6.0}
+deployed short 1 prefill 64.98 decode 12.564 bubble 14.98 kernels 1158 {'communication': 7.2, 'layout_elementwise': 2.8, 'compiler_fused': 81.3, 'rope': 0.9, 'other': 1.8, 'attention': 6.0}
+tp2 image 0 prefill 132.47 decode 12.226 bubble 4.25 kernels 1353 {'other': 1.9, 'layout_elementwise': 7.2, 'communication': 4.7, 'normalization': 4.9, 'gemm': 73.2, 'rope': 0.8, 'attention': 5.8, 'activation': 1.6}
+tp2 image 1 prefill 120.78 decode 12.229 bubble 4.04 kernels 1353 {'other': 2.0, 'layout_elementwise': 7.2, 'communication': 4.7, 'normalization': 4.9, 'gemm': 73.0, 'rope': 0.8, 'attention': 5.8, 'activation': 1.6}
+tp2 short 0 prefill 61.51 decode 13.731 bubble 14.75 kernels 1353 {'other': 1.9, 'layout_elementwise': 7.1, 'communication': 5.6, 'normalization': 4.9, 'gemm': 72.6, 'rope': 0.8, 'attention': 5.5, 'activation': 1.6}
+tp2 short 1 prefill 60.05 decode 13.729 bubble 15.32 kernels 1353 {'other': 2.0, 'layout_elementwise': 7.2, 'communication': 5.0, 'normalization': 4.9, 'gemm': 73.0, 'rope': 0.8, 'attention': 5.5, 'activation': 1.6}
+PASS lesson 3: 8 candidates, 12 traces, interval union and raw memcpy evidence

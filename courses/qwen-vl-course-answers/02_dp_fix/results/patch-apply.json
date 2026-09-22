@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "matches_fixed_snapshot": {
+    "sglang/srt/model_executor/forward_batch_info.py": true,
+    "sglang/srt/models/qwen3_vl.py": true
+  }
+}

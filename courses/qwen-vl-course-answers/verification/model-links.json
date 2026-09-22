@@ -1,0 +1,257 @@
+{
+  "checked_at_utc": "2026-09-22T06:43:09.217078+00:00",
+  "revision": "0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+  "passed": true,
+  "weight_shards": 14,
+  "scope": "Official pages + all file HEAD + small JSON download/parse + 16 bytes per weight shard. Full weight download and model loading NOT tested by this script.",
+  "links": [
+    {
+      "label": "official",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct",
+      "status": 200
+    },
+    {
+      "label": "pinned_files",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/tree/0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+      "status": 200
+    },
+    {
+      "file": ".gitattributes",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/.gitattributes",
+      "status": 200,
+      "expected_bytes": 1519,
+      "lfs_sha256": null
+    },
+    {
+      "file": "README.md",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/README.md",
+      "status": 200,
+      "expected_bytes": 7140,
+      "lfs_sha256": null
+    },
+    {
+      "file": "chat_template.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/chat_template.json",
+      "status": 200,
+      "expected_bytes": 5499,
+      "lfs_sha256": null,
+      "downloaded_bytes": 5499,
+      "download_sha256": "5c72a170d2a4a1a3bc5adad2e689ae28138a9700e5b8c96c0266331e86c0acce"
+    },
+    {
+      "file": "config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/config.json",
+      "status": 200,
+      "expected_bytes": 1474,
+      "lfs_sha256": null,
+      "downloaded_bytes": 1474,
+      "download_sha256": "d2dd0c60d01b9e195d9447c52da61c7302d28828524914c044d9c6e1b81d0427"
+    },
+    {
+      "file": "generation_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/generation_config.json",
+      "status": 200,
+      "expected_bytes": 269,
+      "lfs_sha256": null,
+      "downloaded_bytes": 269,
+      "download_sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4"
+    },
+    {
+      "file": "merges.txt",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/merges.txt",
+      "status": 200,
+      "expected_bytes": 1671839,
+      "lfs_sha256": null
+    },
+    {
+      "file": "model-00001-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00001-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4932328944,
+      "lfs_sha256": "6b9dfbc930e505402ae9d7e5091a9d7d656cda5f34614f01cfe70bfb0cca27cb",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 5608
+    },
+    {
+      "file": "model-00002-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00002-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990528,
+      "lfs_sha256": "d8bb44b4ff303fe76fe9e894022fb3dc71b15a2e716592790fe0e3c3e60478fa",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7160
+    },
+    {
+      "file": "model-00003-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00003-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990552,
+      "lfs_sha256": "54f22e8b3168f8dc962fac0d313607ebf52a12b433d4cf3098a0d82d9f042940",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7184
+    },
+    {
+      "file": "model-00004-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00004-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "ad09c74d3c13ee29b5d0d84548fd8a3424a651564eaccd519946c296e59c557f",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00005-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00005-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "fc993c8a0e2a5b0570f383e1a95dc3a1281d1b224b6f3ee908f4827941e1dfc2",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00006-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00006-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "82f05620d1f718a90c362b221d6a184ff1a0f53301d706882d3df49695fa1974",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00007-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00007-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "fb91da8cb01ff4de3eef0eab1c3e769a734b3a1aafc61734068638a0d6c86934",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00008-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00008-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "431ca56535c8781944ce3801f5eb61c45531e853ecc5846d936ebaf4761b764f",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00009-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00009-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "3825e3f4302f4d2f7d76aa7430d2ce0864fde6b9e540a5806bf0d8e38e4d9f47",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00010-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00010-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "aded5a4d1d5e22dbd8b6f79266b6eb88c840411b09527c53917a1419ace22e2f",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00011-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00011-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "3820ffe8d8d6477f6fe8d614ef3c87abb264ee39accebf43a1507b970d80946f",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00012-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00012-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "05ad2d08ce71963121c9b03f1d9ec5d7641052f4b23c6c12b80d71065eb8e98e",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00013-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00013-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 4875990584,
+      "lfs_sha256": "b64f2289871261fdd1abbd3b78bcd66011b341de3dc8eeb2ed1a473ee7c8d95c",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 7216
+    },
+    {
+      "file": "model-00014-of-00014.safetensors",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model-00014-of-00014.safetensors",
+      "status": 200,
+      "expected_bytes": 3270697008,
+      "lfs_sha256": "e45b6c9998c77ee5a6577f9f47bc76416c1d4d387169e50c4c9d3134ea51b13b",
+      "range_status": 206,
+      "read_bytes": 16,
+      "safetensors_header_bytes": 40520
+    },
+    {
+      "file": "model.safetensors.index.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/model.safetensors.index.json",
+      "status": 200,
+      "expected_bytes": 97831,
+      "lfs_sha256": null,
+      "downloaded_bytes": 97831,
+      "download_sha256": "06c952c569285870b811989b794b9766493e280fb77fbcb957fc4e5fcf25403a"
+    },
+    {
+      "file": "preprocessor_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/preprocessor_config.json",
+      "status": 200,
+      "expected_bytes": 390,
+      "lfs_sha256": null,
+      "downloaded_bytes": 390,
+      "download_sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    {
+      "file": "tokenizer.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/tokenizer.json",
+      "status": 200,
+      "expected_bytes": 7032403,
+      "lfs_sha256": null
+    },
+    {
+      "file": "tokenizer_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/tokenizer_config.json",
+      "status": 200,
+      "expected_bytes": 10868,
+      "lfs_sha256": null,
+      "downloaded_bytes": 10868,
+      "download_sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+    },
+    {
+      "file": "video_preprocessor_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/video_preprocessor_config.json",
+      "status": 200,
+      "expected_bytes": 385,
+      "lfs_sha256": null,
+      "downloaded_bytes": 385,
+      "download_sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+    },
+    {
+      "file": "vocab.json",
+      "url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct/resolve/0cfaf48183f594c314753d30a4c4974bc75f3ccb/vocab.json",
+      "status": 200,
+      "expected_bytes": 2776833,
+      "lfs_sha256": null
+    }
+  ]
+}

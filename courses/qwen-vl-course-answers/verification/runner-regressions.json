@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": [
+    "negative-prefix key parsed as explicit option value",
+    "SO_REUSEADDR still rejects actively listening port",
+    "gpu_lab syntax valid"
+  ],
+  "scope": "Local launcher regression checks; GPU execution recorded separately"
+}

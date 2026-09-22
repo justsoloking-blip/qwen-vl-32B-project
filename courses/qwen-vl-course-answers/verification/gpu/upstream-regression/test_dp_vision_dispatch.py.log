@@ -1,0 +1,42 @@
+test_dp_attention_replicates_vision_weights (__main__.VisionDPTest.test_dp_attention_replicates_vision_weights) ... FAIL
+test_existing_image_sharding_preserved (__main__.VisionDPTest.test_existing_image_sharding_preserved) ... ok
+test_existing_video_sharding_preserved (__main__.VisionDPTest.test_existing_video_sharding_preserved) ... ok
+test_image_stays_local_with_dp_attention (__main__.VisionDPTest.test_image_stays_local_with_dp_attention) ... FAIL
+test_video_stays_local_with_dp_attention (__main__.VisionDPTest.test_video_stays_local_with_dp_attention) ... FAIL
+
+======================================================================
+FAIL: test_dp_attention_replicates_vision_weights (__main__.VisionDPTest.test_dp_attention_replicates_vision_weights)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_vision_dispatch.py", line 24, in test_dp_attention_replicates_vision_weights
+    self.assertTrue(vision.call_args.kwargs['use_data_parallel'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_image_stays_local_with_dp_attention (__main__.VisionDPTest.test_image_stays_local_with_dp_attention)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_vision_dispatch.py", line 49, in test_image_stays_local_with_dp_attention
+    self.check_dispatch('image', True)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_vision_dispatch.py", line 40, in check_dispatch
+    visual.assert_called_once()
+  File "/usr/lib/python3.12/unittest/mock.py", line 923, in assert_called_once
+    raise AssertionError(msg)
+AssertionError: Expected 'mock' to have been called once. Called 0 times.
+
+======================================================================
+FAIL: test_video_stays_local_with_dp_attention (__main__.VisionDPTest.test_video_stays_local_with_dp_attention)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_vision_dispatch.py", line 52, in test_video_stays_local_with_dp_attention
+    self.check_dispatch('video', True)
+  File "/local-ssd/qwen-course-validation/qwen-vl-course-answers/common/project/tests/test_dp_vision_dispatch.py", line 40, in check_dispatch
+    visual.assert_called_once()
+  File "/usr/lib/python3.12/unittest/mock.py", line 923, in assert_called_once
+    raise AssertionError(msg)
+AssertionError: Expected 'mock' to have been called once. Called 0 times.
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+FAILED (failures=3)

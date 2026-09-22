@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "verified_at_utc": "2026-09-22T08:22:13.623210+00:00",
+  "scope": "Archive extracted to a different path containing spaces; four CPU/archive checks and fresh GPU evidence recomputation both exited 0. Does not rerun GPU inference.",
+  "local_checks_exit_code": 0,
+  "gpu_evidence_recompute_exit_code": 0
+}

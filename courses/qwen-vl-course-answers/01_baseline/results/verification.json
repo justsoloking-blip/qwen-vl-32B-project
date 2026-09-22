@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "scope": "Archived metrics recomputed locally; 40 quality fixtures generated/decoded. No model inference.",
+  "verified_at_utc": "2026-09-22T07:51:31.415295+00:00",
+  "details": {
+    "metrics": {
+      "before_cutover": {
+        "short": {
+          "requests": 5,
+          "rounds": 5,
+          "ttft_ms": 71.55849132686853,
+          "tpot_ms": 15.033005839433727,
+          "output_tokens_per_s": 64.56908798768353
+        },
+        "long": {
+          "requests": 5,
+          "rounds": 5,
+          "ttft_ms": 322.5002847611904,
+          "tpot_ms": 15.353312393225083,
+          "output_tokens_per_s": 56.313894508004964
+        },
+        "image": {
+          "requests": 5,
+          "rounds": 5,
+          "ttft_ms": 254.8704482614994,
+          "tpot_ms": 14.8039536814638,
+          "output_tokens_per_s": 59.39565799064662
+        },
+        "concurrent": {
+          "requests": 40,
+          "rounds": 5,
+          "ttft_ms": 269.5985194295645,
+          "tpot_ms": 15.849324698581938,
+          "output_tokens_per_s": 447.4846285655833
+        }
+      },
+      "deployed": {
+        "short": {
+          "requests": 5,
+          "rounds": 5,
+          "ttft_ms": 52.90546081960201,
+          "tpot_ms": 11.252261947576455,
+          "output_tokens_per_s": 86.39226168823954
+        },
+        "long": {
+          "requests": 5,
+          "rounds": 5,
+          "ttft_ms": 252.07163859158754,
+          "tpot_ms": 11.449975584904978,
+          "output_tokens_per_s": 75.0196621006618
+        },
+        "image": {
+          "requests": 5,
+          "rounds": 5,
+          "ttft_ms": 110.9161525964737,
+          "tpot_ms": 10.988189486830723,
+          "output_tokens_per_s": 83.83986400160856
+        },
+        "concurrent": {
+          "requests": 40,
+          "rounds": 5,
+          "ttft_ms": 265.41425148025155,
+          "tpot_ms": 11.98986087977065,
+          "output_tokens_per_s": 572.0377428124051
+        }
+      }
+    },
+    "model_shards": 14,
+    "quality_cases": 40,
+    "config_hidden_size": 5120
+  }
+}

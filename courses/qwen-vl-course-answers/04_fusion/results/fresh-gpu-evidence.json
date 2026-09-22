@@ -1,0 +1,6 @@
+{
+  "evidence_verified": true,
+  "primary_candidate": "Q_qk",
+  "evidence": "verification/gpu/candidates/Q_qk",
+  "aggregate": "verification/full-course-verification.json"
+}

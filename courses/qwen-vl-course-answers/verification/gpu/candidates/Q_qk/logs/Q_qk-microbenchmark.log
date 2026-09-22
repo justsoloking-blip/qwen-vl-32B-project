@@ -1,0 +1,16 @@
+{'tokens': 1, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.7877604166666666, 'reference_us': 9.531764796214738, 'fused_us': 1.7007192395662478}
+{'tokens': 1, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.8012152777777778, 'reference_us': 9.9497165473253, 'fused_us': 1.7464812049509624}
+{'tokens': 4, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.8100043402777778, 'reference_us': 15.628836363440683, 'fused_us': 1.8205303836105997}
+{'tokens': 4, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.81494140625, 'reference_us': 16.07667051845712, 'fused_us': 1.860906770326433}
+{'tokens': 8, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.805908203125, 'reference_us': 15.881162341915694, 'fused_us': 1.8833729258754797}
+{'tokens': 8, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.8114827473958334, 'reference_us': 16.27370289393834, 'fused_us': 1.9228643900017097}
+{'tokens': 32, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.8160400390625, 'reference_us': 17.49645400403151, 'fused_us': 2.2666579174535046}
+{'tokens': 32, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.8155619303385416, 'reference_us': 19.17780188711834, 'fused_us': 3.0765647965448872}
+{'tokens': 128, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.8143310546875, 'reference_us': 22.75876676229606, 'fused_us': 4.454994309664043}
+{'tokens': 128, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.8142462836371528, 'reference_us': 29.190488487426986, 'fused_us': 7.177354300043919}
+{'tokens': 551, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.816214836660617, 'reference_us': 46.245608734468696, 'fused_us': 13.583204369205788}
+{'tokens': 551, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.81228495538415, 'reference_us': 78.35710144042969, 'fused_us': 25.43947546583318}
+{'tokens': 1075, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.8130044815891473, 'reference_us': 77.88806562070494, 'fused_us': 24.839169707479357}
+{'tokens': 1075, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.8130532340116279, 'reference_us': 144.30185342136818, 'fused_us': 48.65993818279289}
+{'tokens': 4050, 'q_heads': 32, 'k_heads': 4, 'max_abs_error': 0.03125, 'exact_fraction': 0.8144534465020576, 'reference_us': 263.4626604313225, 'fused_us': 90.85678442552617}
+{'tokens': 4050, 'q_heads': 64, 'k_heads': 8, 'max_abs_error': 0.03125, 'exact_fraction': 0.8139613340192043, 'reference_us': 500.2703747506869, 'fused_us': 179.30907972629697}

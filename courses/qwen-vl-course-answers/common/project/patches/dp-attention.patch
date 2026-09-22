@@ -1,0 +1,56 @@
+--- a/sglang/srt/model_executor/forward_batch_info.py
++++ b/sglang/srt/model_executor/forward_batch_info.py
+@@ -879,7 +879,11 @@
+         self.positions = self._pad_tensor_to_size(self.positions, num_tokens)
+ 
+         if self.mrope_positions is not None:
+-            self.mrope_positions = self._pad_tensor_to_size(self.mrope_positions, bs)
++            # MRoPE is [3, num_tokens]: pad tokens, preserving the three axes.
++            self.mrope_positions = torch.nn.functional.pad(
++                self.mrope_positions,
++                (0, num_tokens - self.mrope_positions.shape[1]),
++            )
+ 
+         # TODO: check if we need to pad other tensors
+         if self.extend_seq_lens is not None:
+--- a/sglang/srt/models/qwen3_vl.py
++++ b/sglang/srt/models/qwen3_vl.py
+@@ -37,6 +37,7 @@
+ from sglang.srt.layers.logits_processor import LogitsProcessor
+ from sglang.srt.layers.pooler import Pooler, PoolingType
+ from sglang.srt.layers.quantization.base_config import QuantizationConfig
++from sglang.srt.layers.dp_attention import is_dp_attention_enabled
+ from sglang.srt.layers.vocab_parallel_embedding import ParallelLMHead
+ from sglang.srt.managers.mm_utils import (
+     MultiModalityDataPaddingPatternMultimodalTokens,
+@@ -600,7 +601,11 @@
+     ) -> None:
+         super().__init__()
+ 
+-        self.use_data_parallel = get_global_server_args().mm_enable_dp_encoder
++        # DP attention ranks may receive different images, or no image at all.
++        # Keep vision collectives out of the shared TP group in this mode.
++        self.use_data_parallel = (
++            get_global_server_args().mm_enable_dp_encoder or is_dp_attention_enabled()
++        )
+         self.visual = Qwen3VLMoeVisionModel(
+             config.vision_config,
+             # NOTE: Qwen3-VL vision encoder currently supports BitsAndBytes 4-bit quantization.
+@@ -666,7 +671,7 @@
+         image_grid_thw = torch.concat([item.image_grid_thw for item in items], dim=0)
+         assert pixel_values.dim() == 2, pixel_values.dim()
+         assert image_grid_thw.dim() == 2, image_grid_thw.dim()
+-        if self.use_data_parallel:
++        if self.use_data_parallel and not is_dp_attention_enabled():
+             return run_dp_sharded_mrope_vision_model(
+                 self.visual, pixel_values, image_grid_thw.tolist(), rope_type="rope_3d"
+             )
+@@ -682,7 +687,7 @@
+         video_grid_thw = torch.concat([item.video_grid_thw for item in items], dim=0)
+         assert pixel_values.dim() == 2, pixel_values.dim()
+         assert video_grid_thw.dim() == 2, video_grid_thw.dim()
+-        if self.use_data_parallel:
++        if self.use_data_parallel and not is_dp_attention_enabled():
+             return run_dp_sharded_mrope_vision_model(
+                 self.visual, pixel_values, video_grid_thw.tolist(), rope_type="rope_3d"
+             )

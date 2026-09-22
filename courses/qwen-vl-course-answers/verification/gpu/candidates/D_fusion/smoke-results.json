@@ -1,0 +1,91 @@
+{
+  "model": "ieg-infra-qwen3-vl-32b-instruct",
+  "tested_at": "2026-09-22T15:42:25+0800",
+  "unauthenticated_status": 401,
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ieg-infra-qwen3-vl-32b-instruct",
+        "object": "model",
+        "created": 1790062945,
+        "owned_by": "sglang",
+        "root": "ieg-infra-qwen3-vl-32b-instruct",
+        "parent": null,
+        "max_model_len": 32768
+      }
+    ]
+  },
+  "health_status": 200,
+  "text": {
+    "elapsed_seconds": 0.09,
+    "response": {
+      "id": "e849d0c4cd8643a28d230174f5cedd06",
+      "object": "chat.completion",
+      "created": 1790062946,
+      "model": "ieg-infra-qwen3-vl-32b-instruct",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "391",
+            "reasoning_content": null,
+            "tool_calls": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "matched_stop": 151645
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 22,
+        "total_tokens": 26,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "metadata": {
+        "weight_version": "default"
+      }
+    }
+  },
+  "vision": {
+    "elapsed_seconds": 0.28,
+    "response": {
+      "id": "b82415c0a0a14f69880bc48f0b691f27",
+      "object": "chat.completion",
+      "created": 1790062946,
+      "model": "ieg-infra-qwen3-vl-32b-instruct",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "From left to right: a red square and a blue circle.",
+            "reasoning_content": null,
+            "tool_calls": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "matched_stop": 151645
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 129,
+        "total_tokens": 143,
+        "completion_tokens": 14,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      },
+      "metadata": {
+        "weight_version": "default"
+      }
+    }
+  },
+  "streaming": {
+    "completed": true,
+    "content": "部署成功"
+  },
+  "passed": true
+}

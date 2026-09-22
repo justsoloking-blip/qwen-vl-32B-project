@@ -1,0 +1,30 @@
+{
+  "gpus": "0,1",
+  "base_url": "http://127.0.0.1:30100/v1",
+  "arguments": [
+    "--model-path",
+    "/local-ssd/qwen-course-validation/model",
+    "--served-model-name",
+    "ieg-infra-qwen3-vl-32b-instruct",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "30100",
+    "--dtype",
+    "bfloat16",
+    "--tp-size",
+    "2",
+    "--context-length",
+    "32768",
+    "--mem-fraction-static",
+    "0.60",
+    "--max-running-requests",
+    "8",
+    "--cuda-graph-max-bs",
+    "8",
+    "--dp-size",
+    "2",
+    "--enable-dp-attention"
+  ],
+  "env": {}
+}

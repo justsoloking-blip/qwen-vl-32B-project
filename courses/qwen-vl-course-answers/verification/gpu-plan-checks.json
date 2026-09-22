@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "configuration generation only; no CUDA execution",
+  "checks": [
+    {
+      "stage": "baseline",
+      "config_count": 1,
+      "passed": true
+    },
+    {
+      "stage": "fix",
+      "config_count": 1,
+      "passed": true
+    },
+    {
+      "stage": "ablation",
+      "config_count": 7,
+      "passed": true
+    },
+    {
+      "stage": "fusion",
+      "config_count": 2,
+      "passed": true
+    },
+    {
+      "stage": "final",
+      "config_count": 1,
+      "passed": true
+    }
+  ]
+}

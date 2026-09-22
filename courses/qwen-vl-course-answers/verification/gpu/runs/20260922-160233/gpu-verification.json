@@ -1,0 +1,20 @@
+{
+  "stage": "final",
+  "started_at_utc": "2026-09-22T08:02:33.344544+00:00",
+  "passed": false,
+  "completed": [
+    "H_final"
+  ],
+  "quality_failures": [
+    {
+      "label": "H_final",
+      "check": "course-quality",
+      "strict_matches": 39,
+      "count": 40,
+      "note": "One OCR whitespace-format mismatch; original strict failure retained."
+    }
+  ],
+  "scope": "Fresh Linux CUDA execution",
+  "finished_at_utc": "2026-09-22T08:11:45.221633+00:00",
+  "execution_completed": true
+}

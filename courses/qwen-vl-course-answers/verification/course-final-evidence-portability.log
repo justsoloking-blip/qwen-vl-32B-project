@@ -1,0 +1,64 @@
+B_tp2 image 0 prefill 128.46 decode 12.22 bubble 4.2 kernels 1353 {'other': 1.9, 'layout_elementwise': 7.2, 'communication': 4.7, 'normalization': 4.9, 'gemm': 73.2, 'rope': 0.8, 'attention': 5.8, 'activation': 1.6}
+B_tp2 image 1 prefill 120.77 decode 12.218 bubble 4.07 kernels 1353 {'other': 1.9, 'layout_elementwise': 7.1, 'communication': 4.6, 'normalization': 4.9, 'gemm': 73.3, 'rope': 0.8, 'attention': 5.8, 'activation': 1.6}
+B_tp2 short 0 prefill 60.32 decode 13.763 bubble 15.4 kernels 1353 {'other': 1.9, 'layout_elementwise': 7.2, 'communication': 5.1, 'normalization': 4.9, 'gemm': 73.0, 'rope': 0.8, 'attention': 5.5, 'activation': 1.6}
+B_tp2 short 1 prefill 59.94 decode 13.752 bubble 15.69 kernels 1353 {'other': 1.9, 'layout_elementwise': 7.1, 'communication': 4.7, 'normalization': 4.9, 'gemm': 73.4, 'rope': 0.8, 'attention': 5.6, 'activation': 1.6}
+E_compile_fusion image 0 prefill 128.84 decode 11.228 bubble 4.62 kernels 1158 {'communication': 5.5, 'layout_elementwise': 2.8, 'compiler_fused': 82.6, 'rope': 0.9, 'other': 1.8, 'attention': 6.4}
+E_compile_fusion image 1 prefill 117.16 decode 11.23 bubble 4.59 kernels 1158 {'communication': 6.3, 'layout_elementwise': 2.8, 'compiler_fused': 82.0, 'rope': 0.8, 'other': 1.8, 'attention': 6.4}
+E_compile_fusion short 0 prefill 66.02 decode 12.556 bubble 14.36 kernels 1158 {'compiler_fused': 82.1, 'rope': 0.9, 'layout_elementwise': 2.8, 'other': 1.8, 'attention': 6.0, 'communication': 6.5}
+E_compile_fusion short 1 prefill 63.74 decode 12.556 bubble 15.09 kernels 1158 {'communication': 6.4, 'layout_elementwise': 2.8, 'compiler_fused': 82.2, 'rope': 0.8, 'other': 1.8, 'attention': 6.1}
+G_ipc image 0 prefill 114.11 decode 11.836 bubble 4.73 kernels 1222 {'communication': 4.9, 'layout_elementwise': 3.5, 'compiler_fused': 83.0, 'rope': 0.8, 'other': 1.7, 'attention': 6.0}
+G_ipc image 1 prefill 113.72 decode 11.836 bubble 4.69 kernels 1222 {'communication': 6.4, 'layout_elementwise': 3.4, 'compiler_fused': 81.7, 'rope': 0.8, 'other': 1.7, 'attention': 6.0}
+G_ipc short 0 prefill 61.71 decode 13.187 bubble 14.98 kernels 1222 {'communication': 5.1, 'layout_elementwise': 3.5, 'compiler_fused': 83.1, 'rope': 0.8, 'other': 1.7, 'attention': 5.7}
+G_ipc short 1 prefill 60.73 decode 13.177 bubble 14.99 kernels 1222 {'communication': 6.6, 'layout_elementwise': 3.4, 'compiler_fused': 81.8, 'rope': 0.8, 'other': 1.7, 'attention': 5.7}
+{
+  "evidence_validation_passed": true,
+  "verified_at_utc": "2026-09-22T08:21:14.478602+00:00",
+  "scope": "Fresh Linux H200 pair inference + GPU kernel experiments, followed by local evidence recomputation",
+  "labels": [
+    "A_dp2",
+    "B_tp2",
+    "C_compile",
+    "D_fusion",
+    "E_compile_fusion",
+    "F_keep_device",
+    "G_ipc",
+    "Q_qk",
+    "H_final"
+  ],
+  "course_verification_completed": true,
+  "default_candidate_quality": {
+    "strict_matches": 39,
+    "cases": 40,
+    "content_matches_ignoring_OCR_whitespace": 40,
+    "strict_passed": false,
+    "note": "Post-hoc classification of one formatting failure; original strict grading unchanged."
+  },
+  "all_candidates_quality_passed": false,
+  "experimental_candidate_decision": {
+    "candidate": "Q_qk",
+    "accepted": false,
+    "reason": "Observed mixed-concurrency output 130 instead of 1300; preserve failure even if a later rerun passes.",
+    "small_quality_matches": 16,
+    "course_quality_matches": 30
+  },
+  "counts": {
+    "benchmark_batches": 180,
+    "benchmark_requests": 495,
+    "smoke_configurations": 9,
+    "mixed_integration_requests": 38,
+    "quality_requests": 48,
+    "course_quality_requests": 80,
+    "gpu_traces": 12,
+    "gpu_kernel_cases": 16,
+    "specialization_calls": 12,
+    "position_stride_counterexamples": 3
+  },
+  "evidence_root": "verification/gpu",
+  "limitations": [
+    "Five rounds per workload, sequential configurations; not a reliable P99 or causal estimate free of drift.",
+    "Same prompt generator with random request salts; actual input token counts recorded, prompts not byte-identical.",
+    "GPUs 0/1 reserved for experiments; another job remained on GPU6 of the same host.",
+    "40 synthetic quality cases do not establish general business quality or video quality.",
+    "Profiler timings separate from unprofiled 128-token benchmarks."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "fix",
+  "started_at_utc": "2026-09-22T07:27:07.863508+00:00",
+  "passed": false,
+  "completed": [],
+  "scope": "Fresh Linux CUDA execution",
+  "finished_at_utc": "2026-09-22T07:29:14.063389+00:00"
+}

@@ -1,0 +1,216 @@
+{
+  "label": "H_final",
+  "port": 30100,
+  "passed": true,
+  "count": 16,
+  "results": [
+    {
+      "case": "mul-17-23",
+      "expected": "391",
+      "answer": "391",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 26,
+        "total_tokens": 30,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "mul-29-31",
+      "expected": "899",
+      "answer": "899",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 26,
+        "total_tokens": 30,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "mul-124-7",
+      "expected": "868",
+      "answer": "868",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 26,
+        "total_tokens": 30,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "mul-203-9",
+      "expected": "1827",
+      "answer": "1827",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 26,
+        "total_tokens": 31,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "sub-935-267",
+      "expected": "668",
+      "answer": "668",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 28,
+        "total_tokens": 32,
+        "completion_tokens": 4,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "sub-8204-3987",
+      "expected": "4217",
+      "answer": "4217",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 35,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "sub-4901-1649",
+      "expected": "3252",
+      "answer": "3252",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 35,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "sub-6000-1789",
+      "expected": "4211",
+      "answer": "4211",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 30,
+        "total_tokens": 35,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "copy-0",
+      "expected": "8372",
+      "answer": "8372",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 21,
+        "total_tokens": 26,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "copy-200",
+      "expected": "6841",
+      "answer": "6841",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 1421,
+        "total_tokens": 1426,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "copy-1000",
+      "expected": "5926",
+      "answer": "5926",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 7021,
+        "total_tokens": 7026,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "copy-4000",
+      "expected": "4738",
+      "answer": "4738",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 28021,
+        "total_tokens": 28026,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "ocr-5837",
+      "expected": "5837",
+      "answer": "5837",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 127,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "ocr-9246",
+      "expected": "9246",
+      "answer": "9246",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 127,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "ocr-6712",
+      "expected": "6712",
+      "answer": "6712",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 127,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    },
+    {
+      "case": "ocr-3085",
+      "expected": "3085",
+      "answer": "3085",
+      "passed": true,
+      "usage": {
+        "prompt_tokens": 122,
+        "total_tokens": 127,
+        "completion_tokens": 5,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 0
+      }
+    }
+  ]
+}
